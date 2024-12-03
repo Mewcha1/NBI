@@ -1,0 +1,628 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Step 1: Set Up Your Environment &#8212; NBI</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=9bddd278" />
+    <link rel="stylesheet" type="text/css" href="_static/.ipynb_checkpoints/custom-checkpoint.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Instruction to crteate jupyter book';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">NBI</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    NBI project overview
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="team.html">Team Members</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CMIP6.html">Global climate models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NBI.html">NBI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Presentations.html">Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Publication.html">Publication</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Instruction to crteate jupyter book.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Step 1: Set Up Your Environment</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Step 1: Set Up Your Environment</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-create-a-jupyter-book">Step 2: Create a Jupyter Book</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-build-the-book-locally">Step 3: Build the Book Locally</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-publish-to-github">Step 4: Publish to GitHub</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-copy-all-file-from-the-folder-in-step3-to-the-folder-in-step-4-github-repository">Step 5: copy all file from the folder in step3 to the folder in step 4 (github repository)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-uplload-your-html-to-the-repository">Step 6: Uplload your html to the repository</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-enable-github-pages">Step 4: Enable GitHub Pages</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="step-1-set-up-your-environment">
+<h1>Step 1: Set Up Your Environment<a class="headerlink" href="#step-1-set-up-your-environment" title="Link to this heading">#</a></h1>
+<p>Install Python and Jupyter Book: Make sure you have Python installed. Then, install Jupyter Book using pip:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">jupyter</span><span class="o">-</span><span class="n">book</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: jupyter-book in c:\programdata\anaconda3\lib\site-packages (1.0.3)
+Requirement already satisfied: click&lt;9,&gt;=7.1 in c:\programdata\anaconda3\lib\site-packages (from jupyter-book) (8.1.7)
+Requirement already satisfied: Jinja2 in c:\programdata\anaconda3\lib\site-packages (from jupyter-book) (3.1.4)
+Requirement already satisfied: jsonschema&lt;5 in c:\programdata\anaconda3\lib\site-packages (from jupyter-book) (4.19.2)
+Requirement already satisfied: linkify-it-py&lt;3,&gt;=2 in c:\programdata\anaconda3\lib\site-packages (from jupyter-book) (2.0.0)
+Requirement already satisfied: myst-nb&lt;3,&gt;=1 in c:\programdata\anaconda3\lib\site-packages (from jupyter-book) (1.1.2)
+Requirement already satisfied: myst-parser&lt;3,&gt;=1 in c:\programdata\anaconda3\lib\site-packages (from jupyter-book) (2.0.0)
+Requirement already satisfied: pyyaml in c:\programdata\anaconda3\lib\site-packages (from jupyter-book) (6.0.1)
+Requirement already satisfied: sphinx&lt;8,&gt;=5 in c:\programdata\anaconda3\lib\site-packages (from jupyter-book) (7.4.7)
+Requirement already satisfied: sphinx-comments in c:\programdata\anaconda3\lib\site-packages (from jupyter-book) (0.0.3)
+Requirement already satisfied: sphinx-copybutton in c:\programdata\anaconda3\lib\site-packages (from jupyter-book) (0.5.2)
+Requirement already satisfied: sphinx-external-toc&lt;2,&gt;=1.0.1 in c:\programdata\anaconda3\lib\site-packages (from jupyter-book) (1.0.1)
+Requirement already satisfied: sphinx-jupyterbook-latex&lt;2,&gt;=1 in c:\programdata\anaconda3\lib\site-packages (from jupyter-book) (1.0.0)
+Requirement already satisfied: sphinx-design&lt;1,&gt;=0.5 in c:\programdata\anaconda3\lib\site-packages (from jupyter-book) (0.6.1)
+Requirement already satisfied: sphinx-thebe&lt;1,&gt;=0.3.1 in c:\programdata\anaconda3\lib\site-packages (from jupyter-book) (0.3.1)
+Requirement already satisfied: sphinx-book-theme&lt;2,&gt;=1.1.0 in c:\programdata\anaconda3\lib\site-packages (from jupyter-book) (1.1.3)
+Requirement already satisfied: sphinx_togglebutton in c:\programdata\anaconda3\lib\site-packages (from jupyter-book) (0.3.2)
+Requirement already satisfied: sphinxcontrib-bibtex&lt;3,&gt;=2.5.0 in c:\programdata\anaconda3\lib\site-packages (from jupyter-book) (2.6.3)
+Requirement already satisfied: sphinx-multitoc-numbering&lt;1,&gt;=0.1.3 in c:\programdata\anaconda3\lib\site-packages (from jupyter-book) (0.1.3)
+Requirement already satisfied: colorama in c:\programdata\anaconda3\lib\site-packages (from click&lt;9,&gt;=7.1-&gt;jupyter-book) (0.4.6)
+Requirement already satisfied: attrs&gt;=22.2.0 in c:\programdata\anaconda3\lib\site-packages (from jsonschema&lt;5-&gt;jupyter-book) (23.1.0)
+Requirement already satisfied: jsonschema-specifications&gt;=2023.03.6 in c:\programdata\anaconda3\lib\site-packages (from jsonschema&lt;5-&gt;jupyter-book) (2023.7.1)
+Requirement already satisfied: referencing&gt;=0.28.4 in c:\programdata\anaconda3\lib\site-packages (from jsonschema&lt;5-&gt;jupyter-book) (0.30.2)
+Requirement already satisfied: rpds-py&gt;=0.7.1 in c:\programdata\anaconda3\lib\site-packages (from jsonschema&lt;5-&gt;jupyter-book) (0.10.6)
+Requirement already satisfied: uc-micro-py in c:\programdata\anaconda3\lib\site-packages (from linkify-it-py&lt;3,&gt;=2-&gt;jupyter-book) (1.0.1)
+Requirement already satisfied: importlib_metadata in c:\programdata\anaconda3\lib\site-packages (from myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (7.0.1)
+Requirement already satisfied: ipython in c:\programdata\anaconda3\lib\site-packages (from myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (8.20.0)
+Requirement already satisfied: jupyter-cache&gt;=0.5 in c:\programdata\anaconda3\lib\site-packages (from myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (1.0.1)
+Requirement already satisfied: nbclient in c:\programdata\anaconda3\lib\site-packages (from myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (0.8.0)
+Requirement already satisfied: nbformat&gt;=5.0 in c:\programdata\anaconda3\lib\site-packages (from myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (5.9.2)
+Requirement already satisfied: typing-extensions in c:\programdata\anaconda3\lib\site-packages (from myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (4.11.0)
+Requirement already satisfied: ipykernel in c:\programdata\anaconda3\lib\site-packages (from myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (6.28.0)
+Requirement already satisfied: docutils&lt;0.21,&gt;=0.16 in c:\programdata\anaconda3\lib\site-packages (from myst-parser&lt;3,&gt;=1-&gt;jupyter-book) (0.20.1)
+Requirement already satisfied: markdown-it-py~=3.0 in c:\programdata\anaconda3\lib\site-packages (from myst-parser&lt;3,&gt;=1-&gt;jupyter-book) (3.0.0)
+Requirement already satisfied: mdit-py-plugins~=0.4 in c:\programdata\anaconda3\lib\site-packages (from myst-parser&lt;3,&gt;=1-&gt;jupyter-book) (0.4.2)
+Requirement already satisfied: sphinxcontrib-applehelp in c:\programdata\anaconda3\lib\site-packages (from sphinx&lt;8,&gt;=5-&gt;jupyter-book) (1.0.2)
+Requirement already satisfied: sphinxcontrib-devhelp in c:\programdata\anaconda3\lib\site-packages (from sphinx&lt;8,&gt;=5-&gt;jupyter-book) (1.0.2)
+Requirement already satisfied: sphinxcontrib-jsmath in c:\programdata\anaconda3\lib\site-packages (from sphinx&lt;8,&gt;=5-&gt;jupyter-book) (1.0.1)
+Requirement already satisfied: sphinxcontrib-htmlhelp&gt;=2.0.0 in c:\programdata\anaconda3\lib\site-packages (from sphinx&lt;8,&gt;=5-&gt;jupyter-book) (2.0.0)
+Requirement already satisfied: sphinxcontrib-serializinghtml&gt;=1.1.9 in c:\programdata\anaconda3\lib\site-packages (from sphinx&lt;8,&gt;=5-&gt;jupyter-book) (2.0.0)
+Requirement already satisfied: sphinxcontrib-qthelp in c:\programdata\anaconda3\lib\site-packages (from sphinx&lt;8,&gt;=5-&gt;jupyter-book) (1.0.3)
+Requirement already satisfied: Pygments&gt;=2.17 in c:\programdata\anaconda3\lib\site-packages (from sphinx&lt;8,&gt;=5-&gt;jupyter-book) (2.18.0)
+Requirement already satisfied: snowballstemmer&gt;=2.2 in c:\programdata\anaconda3\lib\site-packages (from sphinx&lt;8,&gt;=5-&gt;jupyter-book) (2.2.0)
+Requirement already satisfied: babel&gt;=2.13 in c:\programdata\anaconda3\lib\site-packages (from sphinx&lt;8,&gt;=5-&gt;jupyter-book) (2.16.0)
+Requirement already satisfied: alabaster~=0.7.14 in c:\programdata\anaconda3\lib\site-packages (from sphinx&lt;8,&gt;=5-&gt;jupyter-book) (0.7.16)
+Requirement already satisfied: imagesize&gt;=1.3 in c:\programdata\anaconda3\lib\site-packages (from sphinx&lt;8,&gt;=5-&gt;jupyter-book) (1.4.1)
+Requirement already satisfied: requests&gt;=2.30.0 in c:\programdata\anaconda3\lib\site-packages (from sphinx&lt;8,&gt;=5-&gt;jupyter-book) (2.32.2)
+Requirement already satisfied: packaging&gt;=23.0 in c:\programdata\anaconda3\lib\site-packages (from sphinx&lt;8,&gt;=5-&gt;jupyter-book) (23.2)
+Requirement already satisfied: MarkupSafe&gt;=2.0 in c:\programdata\anaconda3\lib\site-packages (from Jinja2-&gt;jupyter-book) (2.1.3)
+Requirement already satisfied: pydata-sphinx-theme&gt;=0.15.2 in c:\programdata\anaconda3\lib\site-packages (from sphinx-book-theme&lt;2,&gt;=1.1.0-&gt;jupyter-book) (0.16.0)
+Requirement already satisfied: pybtex&gt;=0.24 in c:\programdata\anaconda3\lib\site-packages (from sphinxcontrib-bibtex&lt;3,&gt;=2.5.0-&gt;jupyter-book) (0.24.0)
+Requirement already satisfied: pybtex-docutils&gt;=1.0.0 in c:\programdata\anaconda3\lib\site-packages (from sphinxcontrib-bibtex&lt;3,&gt;=2.5.0-&gt;jupyter-book) (1.0.3)
+Requirement already satisfied: setuptools in c:\programdata\anaconda3\lib\site-packages (from sphinx_togglebutton-&gt;jupyter-book) (69.5.1)
+Requirement already satisfied: wheel in c:\programdata\anaconda3\lib\site-packages (from sphinx_togglebutton-&gt;jupyter-book) (0.43.0)
+Requirement already satisfied: sqlalchemy&lt;3,&gt;=1.3.12 in c:\programdata\anaconda3\lib\site-packages (from jupyter-cache&gt;=0.5-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (2.0.25)
+Requirement already satisfied: tabulate in c:\programdata\anaconda3\lib\site-packages (from jupyter-cache&gt;=0.5-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (0.9.0)
+Requirement already satisfied: mdurl~=0.1 in c:\programdata\anaconda3\lib\site-packages (from markdown-it-py~=3.0-&gt;myst-parser&lt;3,&gt;=1-&gt;jupyter-book) (0.1.0)
+Requirement already satisfied: jupyter-client&gt;=6.1.12 in c:\programdata\anaconda3\lib\site-packages (from nbclient-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (8.6.0)
+Requirement already satisfied: jupyter-core!=5.0.*,&gt;=4.12 in c:\programdata\anaconda3\lib\site-packages (from nbclient-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (5.5.0)
+Requirement already satisfied: traitlets&gt;=5.4 in c:\programdata\anaconda3\lib\site-packages (from nbclient-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (5.7.1)
+Requirement already satisfied: fastjsonschema in c:\programdata\anaconda3\lib\site-packages (from nbformat&gt;=5.0-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (2.16.2)
+Requirement already satisfied: latexcodec&gt;=1.0.4 in c:\programdata\anaconda3\lib\site-packages (from pybtex&gt;=0.24-&gt;sphinxcontrib-bibtex&lt;3,&gt;=2.5.0-&gt;jupyter-book) (3.0.0)
+Requirement already satisfied: six in c:\programdata\anaconda3\lib\site-packages (from pybtex&gt;=0.24-&gt;sphinxcontrib-bibtex&lt;3,&gt;=2.5.0-&gt;jupyter-book) (1.16.0)
+Requirement already satisfied: beautifulsoup4 in c:\programdata\anaconda3\lib\site-packages (from pydata-sphinx-theme&gt;=0.15.2-&gt;sphinx-book-theme&lt;2,&gt;=1.1.0-&gt;jupyter-book) (4.12.3)
+Requirement already satisfied: accessible-pygments in c:\programdata\anaconda3\lib\site-packages (from pydata-sphinx-theme&gt;=0.15.2-&gt;sphinx-book-theme&lt;2,&gt;=1.1.0-&gt;jupyter-book) (0.0.5)
+Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in c:\programdata\anaconda3\lib\site-packages (from requests&gt;=2.30.0-&gt;sphinx&lt;8,&gt;=5-&gt;jupyter-book) (2.0.4)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in c:\programdata\anaconda3\lib\site-packages (from requests&gt;=2.30.0-&gt;sphinx&lt;8,&gt;=5-&gt;jupyter-book) (3.7)
+Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in c:\programdata\anaconda3\lib\site-packages (from requests&gt;=2.30.0-&gt;sphinx&lt;8,&gt;=5-&gt;jupyter-book) (2.2.1)
+Requirement already satisfied: certifi&gt;=2017.4.17 in c:\programdata\anaconda3\lib\site-packages (from requests&gt;=2.30.0-&gt;sphinx&lt;8,&gt;=5-&gt;jupyter-book) (2024.6.2)
+Requirement already satisfied: zipp&gt;=0.5 in c:\programdata\anaconda3\lib\site-packages (from importlib_metadata-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (3.17.0)
+Requirement already satisfied: comm&gt;=0.1.1 in c:\programdata\anaconda3\lib\site-packages (from ipykernel-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (0.2.1)
+Requirement already satisfied: debugpy&gt;=1.6.5 in c:\programdata\anaconda3\lib\site-packages (from ipykernel-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (1.6.7)
+Requirement already satisfied: matplotlib-inline&gt;=0.1 in c:\programdata\anaconda3\lib\site-packages (from ipykernel-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (0.1.6)
+Requirement already satisfied: nest-asyncio in c:\programdata\anaconda3\lib\site-packages (from ipykernel-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (1.6.0)
+Requirement already satisfied: psutil in c:\programdata\anaconda3\lib\site-packages (from ipykernel-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (5.9.0)
+Requirement already satisfied: pyzmq&gt;=24 in c:\programdata\anaconda3\lib\site-packages (from ipykernel-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (25.1.2)
+Requirement already satisfied: tornado&gt;=6.1 in c:\programdata\anaconda3\lib\site-packages (from ipykernel-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (6.3.3)
+Requirement already satisfied: decorator in c:\programdata\anaconda3\lib\site-packages (from ipython-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (5.1.1)
+Requirement already satisfied: jedi&gt;=0.16 in c:\programdata\anaconda3\lib\site-packages (from ipython-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (0.18.1)
+Requirement already satisfied: prompt-toolkit&lt;3.1.0,&gt;=3.0.41 in c:\programdata\anaconda3\lib\site-packages (from ipython-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (3.0.43)
+Requirement already satisfied: stack-data in c:\programdata\anaconda3\lib\site-packages (from ipython-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (0.2.0)
+Requirement already satisfied: parso&lt;0.9.0,&gt;=0.8.0 in c:\programdata\anaconda3\lib\site-packages (from jedi&gt;=0.16-&gt;ipython-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (0.8.3)
+Requirement already satisfied: python-dateutil&gt;=2.8.2 in c:\programdata\anaconda3\lib\site-packages (from jupyter-client&gt;=6.1.12-&gt;nbclient-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (2.9.0.post0)
+Requirement already satisfied: platformdirs&gt;=2.5 in c:\programdata\anaconda3\lib\site-packages (from jupyter-core!=5.0.*,&gt;=4.12-&gt;nbclient-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (3.10.0)
+Requirement already satisfied: pywin32&gt;=300 in c:\programdata\anaconda3\lib\site-packages (from jupyter-core!=5.0.*,&gt;=4.12-&gt;nbclient-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (305.1)
+Requirement already satisfied: wcwidth in c:\programdata\anaconda3\lib\site-packages (from prompt-toolkit&lt;3.1.0,&gt;=3.0.41-&gt;ipython-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (0.2.5)
+Requirement already satisfied: greenlet!=0.4.17 in c:\programdata\anaconda3\lib\site-packages (from sqlalchemy&lt;3,&gt;=1.3.12-&gt;jupyter-cache&gt;=0.5-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (3.0.1)
+Requirement already satisfied: soupsieve&gt;1.2 in c:\programdata\anaconda3\lib\site-packages (from beautifulsoup4-&gt;pydata-sphinx-theme&gt;=0.15.2-&gt;sphinx-book-theme&lt;2,&gt;=1.1.0-&gt;jupyter-book) (2.5)
+Requirement already satisfied: executing in c:\programdata\anaconda3\lib\site-packages (from stack-data-&gt;ipython-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (0.8.3)
+Requirement already satisfied: asttokens in c:\programdata\anaconda3\lib\site-packages (from stack-data-&gt;ipython-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (2.0.5)
+Requirement already satisfied: pure-eval in c:\programdata\anaconda3\lib\site-packages (from stack-data-&gt;ipython-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (0.2.2)
+Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-2-create-a-jupyter-book">
+<h1>Step 2: Create a Jupyter Book<a class="headerlink" href="#step-2-create-a-jupyter-book" title="Link to this heading">#</a></h1>
+<p>Initialize the Book: Create a new Jupyter Book structure:Add Content: Navigate to the created folder [name] and add your content:
+Place Markdown (.md) or Jupyter Notebook (.ipynb) files in the appropriate directories. Update the toc.yml file to define the structure of your book.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">create</span> <span class="n">NBI</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+    <span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">create</span> <span class="n">NBI</span>
+                 <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-3-build-the-book-locally">
+<h1>Step 3: Build the Book Locally<a class="headerlink" href="#step-3-build-the-book-locally" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#This generates the HTML files in _build/html.</span>
+<span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">build</span> <span class="n">NBI</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-4-publish-to-github">
+<h1>Step 4: Publish to GitHub<a class="headerlink" href="#step-4-publish-to-github" title="Link to this heading">#</a></h1>
+<p>Create a GitHub Repository:Go to GitHub and create a new repository.
+Do not initialize the repository with a README file (it will conflict with your local files). Then clone to add all the files to the created repository using the following command. NBI-project is the repository created in gitgub</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="p">[</span><span class="n">repository</span> <span class="n">link</span><span class="p">,</span> <span class="n">eg</span><span class="o">.</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Mewcha</span><span class="o">-</span><span class="n">Amha</span><span class="o">/</span><span class="n">NBI</span><span class="o">-</span><span class="n">project</span> <span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-5-copy-all-file-from-the-folder-in-step3-to-the-folder-in-step-4-github-repository">
+<h1>Step 5: copy all file from the folder in step3 to the folder in step 4 (github repository)<a class="headerlink" href="#step-5-copy-all-file-from-the-folder-in-step3-to-the-folder-in-step-4-github-repository" title="Link to this heading">#</a></h1>
+<p>For better handling of folder structures, use the robocopy command (available by default in Windows):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">robocopy</span> <span class="n">NBI</span> <span class="n">NBI</span><span class="o">-</span><span class="n">project</span> <span class="o">/</span><span class="n">E</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-6-uplload-your-html-to-the-repository">
+<h1>Step 6: Uplload your html to the repository<a class="headerlink" href="#step-6-uplload-your-html-to-the-repository" title="Link to this heading">#</a></h1>
+<p>change the directory in the anaconda propmt to the repository folder (NBI-project).
+use ghp-import tool to publish the html. The ghp-import Python package is a utility designed to quickly deploy static files (like the HTML files generated for your Jupyter Book) to GitHub Pages.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#transferring your built website to a GitHub Pages branch (gh-pages)</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">ghp</span><span class="o">-</span><span class="kn">import</span>
+<span class="c1">#Deploy to GitHub Pages </span>
+<span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="o">-</span><span class="n">n</span> <span class="o">-</span><span class="n">p</span> <span class="o">-</span><span class="n">f</span> <span class="n">_build</span><span class="o">/</span><span class="n">html</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-4-enable-github-pages">
+<h1>Step 4: Enable GitHub Pages<a class="headerlink" href="#step-4-enable-github-pages" title="Link to this heading">#</a></h1>
+<ol class="arabic simple">
+<li><p>Go to the Settings of your GitHub repository.</p></li>
+<li><p>Scroll down to the Pages section.</p></li>
+<li><p>Under Source, select gh-pages (or the appropriate branch if you’ve built your book differently).</p></li>
+<li><p>Save the settings, and GitHub will generate a public URL for your book.</p></li>
+</ol>
+<p>reference: <a class="reference external" href="https://www.youtube.com/watch?v=lZ2FHTkyaMU">https://www.youtube.com/watch?v=lZ2FHTkyaMU</a></p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Step 1: Set Up Your Environment</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-create-a-jupyter-book">Step 2: Create a Jupyter Book</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-build-the-book-locally">Step 3: Build the Book Locally</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-publish-to-github">Step 4: Publish to GitHub</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-copy-all-file-from-the-folder-in-step3-to-the-folder-in-step-4-github-repository">Step 5: copy all file from the folder in step3 to the folder in step 4 (github repository)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-uplload-your-html-to-the-repository">Step 6: Uplload your html to the repository</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-enable-github-pages">Step 4: Enable GitHub Pages</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Mewcha Gebremedhin
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
