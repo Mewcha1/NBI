@@ -1,0 +1,72 @@
+Traceback (most recent call last):
+  File "C:\ProgramData\anaconda3\Lib\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
+    executenb(
+  File "C:\ProgramData\anaconda3\Lib\site-packages\nbclient\client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\Lib\site-packages\jupyter_core\utils\__init__.py", line 173, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\Lib\asyncio\base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\Lib\site-packages\nbclient\client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "C:\ProgramData\anaconda3\Lib\site-packages\nbclient\client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\ProgramData\anaconda3\Lib\site-packages\nbclient\client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import folium
+
+# Define the boundary coordinates for Florida
+florida_bounds = [
+    [25.10831, -81.39207],  # bottom-left corner
+    [25.10831, -80.09851],  # bottom-right corner
+    [25.96406, -80.09851],  # top-right corner
+    [25.96406, -81.39207],  # top-left corner
+    [25.10831, -81.39207]   # closing the loop back to bottom-left
+]
+
+# Create a folium map centered on the middle of the boundary
+florida_map = folium.Map(location=[25.5, -80.75], zoom_start=10)
+
+# Add the boundary as a red polygon
+folium.Polygon(
+    locations=florida_bounds,
+    color='red',
+    weight=3,
+    fill=False  # Make the polygon transparent
+).add_to(florida_map)
+
+# Add a basemap (e.g., Stamen Terrain)
+folium.TileLayer(
+    tiles='Stamen Terrain',
+    attr='Map tiles by Stamen Design, under CC BY 3.0. Data by OpenStreetMap, under ODbL.',
+    name='Stamen Terrain'
+).add_to(florida_map)
+
+# Display the map
+florida_map
+# Save the map to an HTML file
+florida_map.save("florida_map.html")
+print("Map saved as 'florida_map.html'")
+
+------------------
+
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Cell [1;32mIn[1], line 1[0m
+[1;32m----> 1[0m [38;5;28;01mimport[39;00m [38;5;21;01mfolium[39;00m
+[0;32m      3[0m [38;5;66;03m# Define the boundary coordinates for Florida[39;00m
+[0;32m      4[0m florida_bounds [38;5;241m=[39m [
+[0;32m      5[0m     [[38;5;241m25.10831[39m, [38;5;241m-[39m[38;5;241m81.39207[39m],  [38;5;66;03m# bottom-left corner[39;00m
+[0;32m      6[0m     [[38;5;241m25.10831[39m, [38;5;241m-[39m[38;5;241m80.09851[39m],  [38;5;66;03m# bottom-right corner[39;00m
+[1;32m   (...)[0m
+[0;32m      9[0m     [[38;5;241m25.10831[39m, [38;5;241m-[39m[38;5;241m81.39207[39m]   [38;5;66;03m# closing the loop back to bottom-left[39;00m
+[0;32m     10[0m ]
+
+[1;31mModuleNotFoundError[0m: No module named 'folium'
+

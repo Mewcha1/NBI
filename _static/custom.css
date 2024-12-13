@@ -1,41 +1,29 @@
-/* Set the left sidebar background to a water-like color */
+/* Sidebar */
 .bd-sidebar {
-    background-color:  #e6f7ff !important; /* Deep Sky Blue for a water-like effect */
-    position: fixed !important; /* Ensure it stays in the left corner */
+    background-color: #e6f7ff
+    position: fixed;
     top: 0;
     left: 0;
-    width: 250px; /* Adjust width if needed */
-    height: 100%; /* Full height of the viewport */
-    z-index: 1000; /* Ensure it appears above other elements */
-    margin: 0; /* Remove any unwanted margins */
-    padding: 0; /* Remove padding */
-    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2); /* Optional shadow */
-    color: white; /* Set all text inside to white */
-    font-weight: bold; /* Make all text inside bold */
+    width: 250px; /* Sidebar width */
+    height: 100%;
+    z-index: 1000;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-weight: bold;
+    overflow-y: auto;
 }
 
-/* Ensure body has no margins or padding */
+/* Body */
 body {
-    margin: 0 !important;
-    padding: 0 !important;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Ensures the layout works for fixed sidebar */
 }
 
-ul.toc li {
-    font-size: 18px;  /* Increase font size */
-    line-height: 1.6;  /* Increase line height for better spacing */
-}
-
-/* Add vertical margin to TOC list items */
-ul.toc {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-ul.toc li {
-    margin-bottom: 15px; /* Space between each item in the TOC */
-}
-
-.bd-sidebar {
-    color: white !important;
-    font-weight: bold !important;
+/* Content container */
+.main-content {
+    margin-left: 250px; /* Matches sidebar width */
+    padding: 20px;
+    overflow: auto; /* Allows scrolling for the main content */
+    flex-grow: 1; /* Fills remaining space to the right of the sidebar */
 }

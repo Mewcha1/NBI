@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>NBI-project &#8212; Nature-based project</title>
+    <title>Study area &#8212; Nature-based project</title>
   
   
   
@@ -37,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=9bddd278" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=f4e3abca" />
     <link rel="stylesheet" type="text/css" href="_static/.ipynb_checkpoints/custom-checkpoint.css" />
   
   <!-- So that users can add custom icons -->
@@ -62,7 +62,7 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'README';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Study_Area';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -167,7 +167,6 @@
         <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="team.html">Team Members</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMIP6.html">Global climate models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="NBI.html">NBI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Presentations.html">Events</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Publication.html">Publication</a></li>
 </ul>
@@ -224,7 +223,7 @@
       
       
       
-      <li><a href="_sources/README.md" target="_blank"
+      <li><a href="_sources/Study_Area.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -234,7 +233,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -298,7 +297,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>NBI-project</h1>
+    <h1>Study area</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -312,8 +311,63 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="nbi-project">
-<h1>NBI-project<a class="headerlink" href="#nbi-project" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="study-area">
+<h1>Study area<a class="headerlink" href="#study-area" title="Link to this heading">#</a></h1>
+<p>The study area covers the same boundary to the Biscayne and Southern Everglades Coastal Transport (BISECT) domain</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">folium</span>
+
+<span class="c1"># Define the boundary coordinates for Florida</span>
+<span class="n">florida_bounds</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mf">25.10831</span><span class="p">,</span> <span class="o">-</span><span class="mf">81.39207</span><span class="p">],</span>  <span class="c1"># bottom-left corner</span>
+    <span class="p">[</span><span class="mf">25.10831</span><span class="p">,</span> <span class="o">-</span><span class="mf">80.09851</span><span class="p">],</span>  <span class="c1"># bottom-right corner</span>
+    <span class="p">[</span><span class="mf">25.96406</span><span class="p">,</span> <span class="o">-</span><span class="mf">80.09851</span><span class="p">],</span>  <span class="c1"># top-right corner</span>
+    <span class="p">[</span><span class="mf">25.96406</span><span class="p">,</span> <span class="o">-</span><span class="mf">81.39207</span><span class="p">],</span>  <span class="c1"># top-left corner</span>
+    <span class="p">[</span><span class="mf">25.10831</span><span class="p">,</span> <span class="o">-</span><span class="mf">81.39207</span><span class="p">]</span>   <span class="c1"># closing the loop back to bottom-left</span>
+<span class="p">]</span>
+
+<span class="c1"># Create a folium map centered on the middle of the boundary</span>
+<span class="n">florida_map</span> <span class="o">=</span> <span class="n">folium</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="p">[</span><span class="mf">25.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">80.75</span><span class="p">],</span> <span class="n">zoom_start</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="c1"># Add the boundary as a red polygon</span>
+<span class="n">folium</span><span class="o">.</span><span class="n">Polygon</span><span class="p">(</span>
+    <span class="n">locations</span><span class="o">=</span><span class="n">florida_bounds</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span>
+    <span class="n">weight</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">fill</span><span class="o">=</span><span class="kc">False</span>  <span class="c1"># Make the polygon transparent</span>
+<span class="p">)</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">florida_map</span><span class="p">)</span>
+
+<span class="c1"># Add a basemap (e.g., Stamen Terrain)</span>
+<span class="n">folium</span><span class="o">.</span><span class="n">TileLayer</span><span class="p">(</span>
+    <span class="n">tiles</span><span class="o">=</span><span class="s1">&#39;Stamen Terrain&#39;</span><span class="p">,</span>
+    <span class="n">attr</span><span class="o">=</span><span class="s1">&#39;Map tiles by Stamen Design, under CC BY 3.0. Data by OpenStreetMap, under ODbL.&#39;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Stamen Terrain&#39;</span>
+<span class="p">)</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">florida_map</span><span class="p">)</span>
+
+<span class="c1"># Display the map</span>
+<span class="n">florida_map</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">folium</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># Define the boundary coordinates for Florida</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">florida_bounds</span> <span class="o">=</span> <span class="p">[</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="p">[</span><span class="mf">25.10831</span><span class="p">,</span> <span class="o">-</span><span class="mf">81.39207</span><span class="p">],</span>  <span class="c1"># bottom-left corner</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="p">[</span><span class="mf">25.10831</span><span class="p">,</span> <span class="o">-</span><span class="mf">80.09851</span><span class="p">],</span>  <span class="c1"># bottom-right corner</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="p">[</span><span class="mf">25.10831</span><span class="p">,</span> <span class="o">-</span><span class="mf">81.39207</span><span class="p">]</span>   <span class="c1"># closing the loop back to bottom-left</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="p">]</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;folium&#39;
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">

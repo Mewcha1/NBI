@@ -34,10 +34,10 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=9bddd278" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=73fd10c0" />
     <link rel="stylesheet" type="text/css" href="_static/.ipynb_checkpoints/custom-checkpoint.css" />
   
   <!-- So that users can add custom icons -->
@@ -167,7 +167,6 @@
         <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="team.html">Team Members</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMIP6.html">Global climate models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="NBI.html">NBI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Presentations.html">Events</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Publication.html">Publication</a></li>
 </ul>
@@ -339,7 +338,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: jupyter-book in c:\programdata\anaconda3\lib\site-packages (1.0.3)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: jupyter-book in c:\programdata\anaconda3\lib\site-packages (1.0.3)Note: you may need to restart the kernel to use updated packages.
+
 Requirement already satisfied: click&lt;9,&gt;=7.1 in c:\programdata\anaconda3\lib\site-packages (from jupyter-book) (8.1.7)
 Requirement already satisfied: Jinja2 in c:\programdata\anaconda3\lib\site-packages (from jupyter-book) (3.1.4)
 Requirement already satisfied: jsonschema&lt;5 in c:\programdata\anaconda3\lib\site-packages (from jupyter-book) (4.19.2)
@@ -430,7 +430,6 @@ Requirement already satisfied: soupsieve&gt;1.2 in c:\programdata\anaconda3\lib\
 Requirement already satisfied: executing in c:\programdata\anaconda3\lib\site-packages (from stack-data-&gt;ipython-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (0.8.3)
 Requirement already satisfied: asttokens in c:\programdata\anaconda3\lib\site-packages (from stack-data-&gt;ipython-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (2.0.5)
 Requirement already satisfied: pure-eval in c:\programdata\anaconda3\lib\site-packages (from stack-data-&gt;ipython-&gt;myst-nb&lt;3,&gt;=1-&gt;jupyter-book) (0.2.2)
-Note: you may need to restart the kernel to use updated packages.
 </pre></div>
 </div>
 </div>
@@ -514,6 +513,93 @@ use ghp-import tool to publish the html. The ghp-import Python package is a util
 <li><p>Save the settings, and GitHub will generate a public URL for your book.</p></li>
 </ol>
 <p>reference: <a class="reference external" href="https://www.youtube.com/watch?v=lZ2FHTkyaMU">https://www.youtube.com/watch?v=lZ2FHTkyaMU</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ee</span>
+<span class="kn">import</span> <span class="nn">geemap</span>
+
+<span class="c1"># Authenticate and initialize Earth Engine</span>
+<span class="n">ee</span><span class="o">.</span><span class="n">Authenticate</span><span class="p">()</span>
+<span class="n">ee</span><span class="o">.</span><span class="n">Initialize</span><span class="p">()</span>
+<span class="c1"># Define Florida&#39;s bounding box</span>
+<span class="n">florida_bounds</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">Rectangle</span><span class="p">([</span>
+    <span class="o">-</span><span class="mf">81.39207</span><span class="p">,</span>  <span class="c1"># lon_min</span>
+    <span class="mf">25.10831</span><span class="p">,</span>   <span class="c1"># lat_min</span>
+    <span class="o">-</span><span class="mf">80.09851</span><span class="p">,</span>  <span class="c1"># lon_max</span>
+    <span class="mf">25.96406</span>    <span class="c1"># lat_max</span>
+<span class="p">])</span>
+
+<span class="c1"># Create a map centered on the Florida bounds</span>
+<span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">[</span><span class="mf">25.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">80.75</span><span class="p">],</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="c1"># Add a basemap (Google Satellite basemap)</span>
+<span class="n">Map</span><span class="o">.</span><span class="n">add_basemap</span><span class="p">(</span><span class="s1">&#39;SATELLITE&#39;</span><span class="p">)</span>  <span class="c1"># Google Satellite basemap</span>
+
+<span class="c1"># Create a border by converting the rectangle into a line geometry</span>
+<span class="n">border</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">LineString</span><span class="p">([</span>
+    <span class="p">[</span><span class="o">-</span><span class="mf">81.39207</span><span class="p">,</span> <span class="mf">25.10831</span><span class="p">],</span>  <span class="c1"># bottom-left corner</span>
+    <span class="p">[</span><span class="o">-</span><span class="mf">80.09851</span><span class="p">,</span> <span class="mf">25.10831</span><span class="p">],</span>  <span class="c1"># bottom-right corner</span>
+    <span class="p">[</span><span class="o">-</span><span class="mf">80.09851</span><span class="p">,</span> <span class="mf">25.96406</span><span class="p">],</span>  <span class="c1"># top-right corner</span>
+    <span class="p">[</span><span class="o">-</span><span class="mf">81.39207</span><span class="p">,</span> <span class="mf">25.96406</span><span class="p">],</span>  <span class="c1"># top-left corner</span>
+    <span class="p">[</span><span class="o">-</span><span class="mf">81.39207</span><span class="p">,</span> <span class="mf">25.10831</span><span class="p">]</span>   <span class="c1"># closing the loop back to bottom-left</span>
+<span class="p">])</span>
+
+<span class="c1"># Add the red border line to the map (this layer is now added last to be in front)</span>
+<span class="n">Map</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">border</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;width&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">},</span> <span class="s1">&#39;Florida Boundary Border&#39;</span><span class="p">)</span>
+
+<span class="c1"># Display the map</span>
+<span class="n">Map</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "d7a7d87fa97e4ce496be310a4a6885e7", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">folium</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+            <style>
+                .geemap-dark {
+                    --jp-widgets-color: white;
+                    --jp-widgets-label-color: white;
+                    --jp-ui-font-color1: white;
+                    --jp-layout-color2: #454545;
+                    background-color: #383838;
+                }
+
+                .geemap-dark .jupyter-button {
+                    --jp-layout-color3: #383838;
+                }
+
+                .geemap-colab {
+                    background-color: var(--colab-primary-surface-color, white);
+                }
+
+                .geemap-colab .jupyter-button {
+                    --jp-layout-color3: var(--colab-primary-surface-color, white);
+                }
+            </style>
+            </div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: folium in c:\users\mgebremedhin\appdata\local\miniconda3\lib\site-packages (0.18.0)
+Requirement already satisfied: branca&gt;=0.6.0 in c:\users\mgebremedhin\appdata\local\miniconda3\lib\site-packages (from folium) (0.8.0)
+Requirement already satisfied: jinja2&gt;=2.9 in c:\users\mgebremedhin\appdata\local\miniconda3\lib\site-packages (from folium) (3.1.4)
+Requirement already satisfied: numpy in c:\users\mgebremedhin\appdata\local\miniconda3\lib\site-packages (from folium) (2.1.3)
+Requirement already satisfied: requests in c:\users\mgebremedhin\appdata\local\miniconda3\lib\site-packages (from folium) (2.32.3)
+Requirement already satisfied: xyzservices in c:\users\mgebremedhin\appdata\local\miniconda3\lib\site-packages (from folium) (2024.9.0)
+Requirement already satisfied: MarkupSafe&gt;=2.0 in c:\users\mgebremedhin\appdata\local\miniconda3\lib\site-packages (from jinja2&gt;=2.9-&gt;folium) (3.0.2)
+Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in c:\users\mgebremedhin\appdata\local\miniconda3\lib\site-packages (from requests-&gt;folium) (3.3.2)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in c:\users\mgebremedhin\appdata\local\miniconda3\lib\site-packages (from requests-&gt;folium) (3.7)
+Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in c:\users\mgebremedhin\appdata\local\miniconda3\lib\site-packages (from requests-&gt;folium) (2.2.3)
+Requirement already satisfied: certifi&gt;=2017.4.17 in c:\users\mgebremedhin\appdata\local\miniconda3\lib\site-packages (from requests-&gt;folium) (2024.8.30)
+Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
