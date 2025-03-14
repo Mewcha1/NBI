@@ -16,35 +16,32 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=73fd10c0" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=3874eb3a" />
     <link rel="stylesheet" type="text/css" href="_static/.ipynb_checkpoints/custom-checkpoint.css" />
   
-  <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
@@ -65,11 +62,10 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'CMIP6';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Events" href="Presentations.html" />
-    <link rel="prev" title="Team Members" href="team.html" />
+    <link rel="next" title="Modeling" href="Modeling.html" />
+    <link rel="prev" title="Study area" href="StudyArea.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -85,8 +81,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -94,6 +101,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -101,8 +109,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -118,8 +126,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -149,11 +156,15 @@
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -166,7 +177,10 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="team.html">Team Members</a></li>
+<li class="toctree-l1"><a class="reference internal" href="StudyArea.html">Study area</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Global climate models</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="Modeling.html">Modeling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Presentations.html">Events</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Publication.html">Publication</a></li>
 </ul>
@@ -276,16 +290,24 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
+  </button>
+`);
+</script>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -309,9 +331,29 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Global climate models</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cmip6-based-multi-model-hydroclimate-projection-over-the-conterminous-us-version-1-1">CMIP6-based Multi-model Hydroclimate Projection over the Conterminous US, Version 1.1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualization-of-baseline-and-near-future-precipitation-tmax-tmin-projections-for-soth-florida">Visualization of Baseline and Near-Future Precipitation, Tmax. Tmin Projections for Soth Florida</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#code-summary-downloading-and-saving-netcdf-files-baseline">Code Summary: Downloading and Saving NetCDF Files (Baseline)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-netcdf-url"><code class="docutils literal notranslate"><span class="pre">download_netcdf(url)</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-and-save-netcdf-models-base-url-variable-name-years-output-path"><code class="docutils literal notranslate"><span class="pre">download_and_save_netcdf(models,</span> <span class="pre">base_url,</span> <span class="pre">variable_name,</span> <span class="pre">years,</span> <span class="pre">output_path)</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-usage">Example Usage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-notes">Key Notes:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#precipitation-validation">Precipitation validation</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#geotiff-files-into-a-single-dat-file">GeoTIFF files into a single .dat file</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -448,11 +490,431 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/16580a2707ccad777a2c49167b8fb6108bd85818881c08e9aa345cb5255618ba.png" src="_images/16580a2707ccad777a2c49167b8fb6108bd85818881c08e9aa345cb5255618ba.png" />
-<img alt="_images/c2f363a5b22b351d01421c1c211c17c0bd2c58c65cba437461cb4a3d759d4253.png" src="_images/c2f363a5b22b351d01421c1c211c17c0bd2c58c65cba437461cb4a3d759d4253.png" />
-<img alt="_images/7644fd8cd6e61adc91f96a42d3cd0b9b74d8b333721a293851d1133f857e0b2b.png" src="_images/7644fd8cd6e61adc91f96a42d3cd0b9b74d8b333721a293851d1133f857e0b2b.png" />
+<img alt="_images/bcc362408c1ebd6443c3a316e26fc077117d834aec0e58a5e255dc122d675a5a.png" src="_images/bcc362408c1ebd6443c3a316e26fc077117d834aec0e58a5e255dc122d675a5a.png" />
+<img alt="_images/3cadfae9ca20e9c92341b79e436300e37ee77d676c2d16094056f7c091020e40.png" src="_images/3cadfae9ca20e9c92341b79e436300e37ee77d676c2d16094056f7c091020e40.png" />
+<img alt="_images/d4b8a6959e4f496062e5dedd1d1a9f4c54398ff19bb3b8544c956fc0a21dcc4d.png" src="_images/d4b8a6959e4f496062e5dedd1d1a9f4c54398ff19bb3b8544c956fc0a21dcc4d.png" />
 </div>
 </div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="code-summary-downloading-and-saving-netcdf-files-baseline">
+<h1>Code Summary: Downloading and Saving NetCDF Files (Baseline)<a class="headerlink" href="#code-summary-downloading-and-saving-netcdf-files-baseline" title="Link to this heading">#</a></h1>
+<p>This Python script downloads precipitation (or any other variable) data in NetCDF format for different climate models and years, and saves it to specified local directories. The main functions of the script are:</p>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">#</a></h2>
+<section id="download-netcdf-url">
+<h3><code class="docutils literal notranslate"><span class="pre">download_netcdf(url)</span></code><a class="headerlink" href="#download-netcdf-url" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Downloads a NetCDF file from the given URL.</p></li>
+<li><p>Returns the content as a <code class="docutils literal notranslate"><span class="pre">BytesIO</span></code> object for further processing.</p></li>
+</ul>
+</section>
+<section id="download-and-save-netcdf-models-base-url-variable-name-years-output-path">
+<h3><code class="docutils literal notranslate"><span class="pre">download_and_save_netcdf(models,</span> <span class="pre">base_url,</span> <span class="pre">variable_name,</span> <span class="pre">years,</span> <span class="pre">output_path)</span></code><a class="headerlink" href="#download-and-save-netcdf-models-base-url-variable-name-years-output-path" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Loops through the list of models and years.</p></li>
+<li><p>Constructs the URL for each model-year combination based on the base URL and other parameters.</p></li>
+<li><p>Downloads the corresponding NetCDF file using the <code class="docutils literal notranslate"><span class="pre">download_netcdf</span></code> function.</p></li>
+<li><p>Opens the NetCDF file using <code class="docutils literal notranslate"><span class="pre">xarray</span></code> and saves it to a specified output directory in NetCDF format.</p></li>
+</ul>
+</section>
+</section>
+<section id="example-usage">
+<h2>Example Usage<a class="headerlink" href="#example-usage" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Model Names</strong>: A list of climate models (<code class="docutils literal notranslate"><span class="pre">ACCESS-CM2</span></code>, <code class="docutils literal notranslate"><span class="pre">BCC-CSM2-MR</span></code>, etc.) for which data is to be downloaded.</p></li>
+<li><p><strong>Base URL</strong>: The base URL for accessing the NetCDF files from the server.</p></li>
+<li><p><strong>Variable Name</strong>: The name of the variable (e.g., <code class="docutils literal notranslate"><span class="pre">prcp</span></code> for precipitation).</p></li>
+<li><p><strong>Years</strong>: The list of years for which the data is to be downloaded (e.g., 1980, 1981).</p></li>
+<li><p><strong>Output Directory</strong>: The directory where the downloaded NetCDF files will be saved.</p></li>
+</ol>
+<p>The code ensures that the output directory exists, and for each year-model combination, it downloads and saves the NetCDF file.</p>
+</section>
+<section id="key-notes">
+<h2>Key Notes:<a class="headerlink" href="#key-notes" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>The output files are saved with the format <code class="docutils literal notranslate"><span class="pre">model_ssp585_variant_RegCM_Daymet_VIC4_variable_year.nc</span></code> in the specified directory.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">import</span> <span class="nn">io</span>
+
+<span class="k">def</span> <span class="nf">fetch_netcdf_from_url</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Fetch the NetCDF file from the given URL.&quot;&quot;&quot;</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed to download NetCDF file. Status code: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">average_prcp_for_year</span><span class="p">(</span><span class="n">models</span><span class="p">,</span> <span class="n">base_url</span><span class="p">,</span> <span class="n">variable_name</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Average precipitation data from multiple NetCDF files for a specific year.&quot;&quot;&quot;</span>
+    <span class="c1"># List to store precipitation data</span>
+    <span class="n">prcp_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">models</span><span class="p">:</span>
+        <span class="c1"># Determine variant label</span>
+        <span class="n">variant_label</span> <span class="o">=</span> <span class="s2">&quot;r1i1p1f2&quot;</span> <span class="k">if</span> <span class="n">model</span> <span class="o">==</span> <span class="s2">&quot;CNRM-ESM2-1&quot;</span> <span class="k">else</span> <span class="s2">&quot;r1i1p1f1&quot;</span>
+
+        <span class="c1"># Construct the URL for the model, use Daymet or Livneh</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">base_url</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">model</span><span class="si">}</span><span class="s2">_ssp585_</span><span class="si">{</span><span class="n">variant_label</span><span class="si">}</span><span class="s2">_RegCM_Livneh/</span><span class="si">{</span><span class="n">variable_name</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">model</span><span class="si">}</span><span class="s2">_ssp585_</span><span class="si">{</span><span class="n">variant_label</span><span class="si">}</span><span class="s2">_RegCM_Livneh_VIC4_</span><span class="si">{</span><span class="n">variable_name</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2">.nc&quot;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Fetching data from: </span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># Debugging: Print the URL</span>
+        
+        <span class="c1"># Fetch the NetCDF file</span>
+        <span class="n">netcdf_file</span> <span class="o">=</span> <span class="n">fetch_netcdf_from_url</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+        <span class="c1"># Read the NetCDF dataset</span>
+        <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">netcdf_file</span><span class="p">)</span>
+        
+        <span class="c1"># Check if the variable exists</span>
+        <span class="k">if</span> <span class="n">variable_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ds</span><span class="o">.</span><span class="n">variables</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&#39;</span><span class="si">{</span><span class="n">variable_name</span><span class="si">}</span><span class="s2">&#39; variable not found in </span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Adjust names of lat/lon and time if needed</span>
+        <span class="n">lat_name</span> <span class="o">=</span> <span class="s1">&#39;lat&#39;</span>
+        <span class="n">lon_name</span> <span class="o">=</span> <span class="s1">&#39;lon&#39;</span>
+        <span class="n">time_name</span> <span class="o">=</span> <span class="s1">&#39;time&#39;</span>
+        <span class="k">if</span> <span class="n">lat_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ds</span><span class="o">.</span><span class="n">variables</span> <span class="ow">or</span> <span class="n">lon_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ds</span><span class="o">.</span><span class="n">variables</span> <span class="ow">or</span> <span class="n">time_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ds</span><span class="o">.</span><span class="n">variables</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Latitude, longitude, or time dimensions not found in the dataset.&quot;</span><span class="p">)</span>
+        
+        <span class="c1"># Filter data for the year</span>
+        <span class="n">year_data</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span>
+            <span class="p">{</span><span class="n">time_name</span><span class="p">:</span> <span class="n">ds</span><span class="p">[</span><span class="n">time_name</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span> <span class="o">==</span> <span class="n">year</span><span class="p">}</span>
+        <span class="p">)</span>
+
+        <span class="c1"># Append the prcp data to the list</span>
+        <span class="n">prcp_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">year_data</span><span class="p">[</span><span class="n">variable_name</span><span class="p">])</span>
+
+    <span class="c1"># Compute the average across all models</span>
+    <span class="n">prcp_average</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">prcp_list</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="s1">&#39;model&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;model&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">prcp_average</span>
+
+<span class="c1"># Define model names, base URL, and other parameters</span>
+<span class="n">models</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;ACCESS-CM2&#39;</span><span class="p">,</span> <span class="s1">&#39;BCC-CSM2-MR&#39;</span><span class="p">,</span> <span class="s1">&#39;CNRM-ESM2-1&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;MPI-ESM1-2-HR&#39;</span><span class="p">,</span> <span class="s1">&#39;MRI-ESM2-0&#39;</span><span class="p">,</span> <span class="s1">&#39;NorESM2-MM&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+<span class="n">base_url</span> <span class="o">=</span> <span class="s2">&quot;https://hydroshare.ornl.gov/files/9505/SWA9505V3&quot;</span>
+<span class="n">variable_name</span> <span class="o">=</span> <span class="s2">&quot;prcp&quot;</span>
+
+<span class="c1"># Loop over the years 1980 to 2019 and save averaged precipitation data</span>
+<span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2051</span><span class="p">,</span> <span class="mi">2059</span><span class="p">):</span>
+    <span class="n">prcp_average</span> <span class="o">=</span> <span class="n">average_prcp_for_year</span><span class="p">(</span><span class="n">models</span><span class="p">,</span> <span class="n">base_url</span><span class="p">,</span> <span class="n">variable_name</span><span class="p">,</span> <span class="n">year</span><span class="p">)</span>
+    <span class="n">output_filename</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;C:/Users/mgebremedhin/OneDrive - Florida Gulf Coast University/FGCU_Mewcha_Data/Livneh/Future/</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2">.nc&quot;</span>
+    <span class="n">prcp_average</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">(</span><span class="n">output_filename</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Averaged precipitation data for </span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2"> has been saved to </span><span class="si">{</span><span class="n">output_filename</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fetching data from: https://hydroshare.ornl.gov/files/9505/SWA9505V3/ACCESS-CM2_ssp585_r1i1p1f1_RegCM_Livneh/prcp/ACCESS-CM2_ssp585_r1i1p1f1_RegCM_Livneh_VIC4_prcp_2051.nc
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">66</span>
+<span class="g g-Whitespace">     </span><span class="mi">64</span> <span class="c1"># Loop over the years 1980 to 2019 and save averaged precipitation data</span>
+<span class="g g-Whitespace">     </span><span class="mi">65</span> <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2051</span><span class="p">,</span> <span class="mi">2059</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">66</span>     <span class="n">prcp_average</span> <span class="o">=</span> <span class="n">average_prcp_for_year</span><span class="p">(</span><span class="n">models</span><span class="p">,</span> <span class="n">base_url</span><span class="p">,</span> <span class="n">variable_name</span><span class="p">,</span> <span class="n">year</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">67</span>     <span class="n">output_filename</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;C:/Users/mgebremedhin/OneDrive - Florida Gulf Coast University/FGCU_Mewcha_Data/Livneh/Future/</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2">.nc&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">68</span>     <span class="n">prcp_average</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">(</span><span class="n">output_filename</span><span class="p">)</span>
+
+<span class="nn">Cell In[2], line 27,</span> in <span class="ni">average_prcp_for_year</span><span class="nt">(models, base_url, variable_name, year)</span>
+<span class="g g-Whitespace">     </span><span class="mi">24</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Fetching data from: </span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># Debugging: Print the URL</span>
+<span class="g g-Whitespace">     </span><span class="mi">26</span> <span class="c1"># Fetch the NetCDF file</span>
+<span class="ne">---&gt; </span><span class="mi">27</span> <span class="n">netcdf_file</span> <span class="o">=</span> <span class="n">fetch_netcdf_from_url</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">29</span> <span class="c1"># Read the NetCDF dataset</span>
+<span class="g g-Whitespace">     </span><span class="mi">30</span> <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">netcdf_file</span><span class="p">)</span>
+
+<span class="nn">Cell In[2], line 7,</span> in <span class="ni">fetch_netcdf_from_url</span><span class="nt">(url)</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="k">def</span> <span class="nf">fetch_netcdf_from_url</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Fetch the NetCDF file from the given URL.&quot;&quot;&quot;</span>
+<span class="ne">----&gt; </span><span class="mi">7</span>     <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>         <span class="k">return</span> <span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+
+<span class="nn">File ~\AppData\Local\miniconda3\Lib\site-packages\requests\api.py:73,</span> in <span class="ni">get</span><span class="nt">(url, params, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">62</span> <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">63</span><span class="w">     </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Sends a GET request.</span>
+<span class="g g-Whitespace">     </span><span class="mi">64</span><span class="sd"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">65</span><span class="sd">     :param url: URL for the new :class:`Request` object.</span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">     </span><span class="mi">70</span><span class="sd">     :rtype: requests.Response</span>
+<span class="g g-Whitespace">     </span><span class="mi">71</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">---&gt; </span><span class="mi">73</span>     <span class="k">return</span> <span class="n">request</span><span class="p">(</span><span class="s2">&quot;get&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File ~\AppData\Local\miniconda3\Lib\site-packages\requests\api.py:59,</span> in <span class="ni">request</span><span class="nt">(method, url, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">55</span> <span class="c1"># By using the &#39;with&#39; statement we are sure the session is closed, thus we</span>
+<span class="g g-Whitespace">     </span><span class="mi">56</span> <span class="c1"># avoid leaving sockets open which can trigger a ResourceWarning in some</span>
+<span class="g g-Whitespace">     </span><span class="mi">57</span> <span class="c1"># cases, and look like a memory leak in others.</span>
+<span class="g g-Whitespace">     </span><span class="mi">58</span> <span class="k">with</span> <span class="n">sessions</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">session</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">59</span>     <span class="k">return</span> <span class="n">session</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File ~\AppData\Local\miniconda3\Lib\site-packages\requests\sessions.py:589,</span> in <span class="ni">Session.request</span><span class="nt">(self, method, url, params, data, headers, cookies, files, auth, timeout, allow_redirects, proxies, hooks, stream, verify, cert, json)</span>
+<span class="g g-Whitespace">    </span><span class="mi">584</span> <span class="n">send_kwargs</span> <span class="o">=</span> <span class="p">{</span>
+<span class="g g-Whitespace">    </span><span class="mi">585</span>     <span class="s2">&quot;timeout&quot;</span><span class="p">:</span> <span class="n">timeout</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">586</span>     <span class="s2">&quot;allow_redirects&quot;</span><span class="p">:</span> <span class="n">allow_redirects</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">587</span> <span class="p">}</span>
+<span class="g g-Whitespace">    </span><span class="mi">588</span> <span class="n">send_kwargs</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">589</span> <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">prep</span><span class="p">,</span> <span class="o">**</span><span class="n">send_kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">591</span> <span class="k">return</span> <span class="n">resp</span>
+
+<span class="nn">File ~\AppData\Local\miniconda3\Lib\site-packages\requests\sessions.py:746,</span> in <span class="ni">Session.send</span><span class="nt">(self, request, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">743</span>         <span class="k">pass</span>
+<span class="g g-Whitespace">    </span><span class="mi">745</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">stream</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">746</span>     <span class="n">r</span><span class="o">.</span><span class="n">content</span>
+<span class="g g-Whitespace">    </span><span class="mi">748</span> <span class="k">return</span> <span class="n">r</span>
+
+<span class="nn">File ~\AppData\Local\miniconda3\Lib\site-packages\requests\models.py:902,</span> in <span class="ni">Response.content</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">900</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_content</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">901</span>     <span class="k">else</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">902</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_content</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">iter_content</span><span class="p">(</span><span class="n">CONTENT_CHUNK_SIZE</span><span class="p">))</span> <span class="ow">or</span> <span class="sa">b</span><span class="s2">&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">904</span> <span class="bp">self</span><span class="o">.</span><span class="n">_content_consumed</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="g g-Whitespace">    </span><span class="mi">905</span> <span class="c1"># don&#39;t need to release the connection; that&#39;s been handled by urllib3</span>
+<span class="g g-Whitespace">    </span><span class="mi">906</span> <span class="c1"># since we exhausted the data.</span>
+
+<span class="nn">File ~\AppData\Local\miniconda3\Lib\site-packages\requests\models.py:820,</span> in <span class="ni">Response.iter_content.&lt;locals&gt;.generate</span><span class="nt">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">818</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="p">,</span> <span class="s2">&quot;stream&quot;</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">819</span>     <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">820</span>         <span class="k">yield from</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="o">.</span><span class="n">stream</span><span class="p">(</span><span class="n">chunk_size</span><span class="p">,</span> <span class="n">decode_content</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">821</span>     <span class="k">except</span> <span class="n">ProtocolError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">822</span>         <span class="k">raise</span> <span class="n">ChunkedEncodingError</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+<span class="nn">File ~\AppData\Local\miniconda3\Lib\site-packages\urllib3\response.py:1060,</span> in <span class="ni">HTTPResponse.stream</span><span class="nt">(self, amt, decode_content)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1058</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1059</span>     <span class="k">while</span> <span class="ow">not</span> <span class="n">is_fp_closed</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_fp</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_decoded_buffer</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1060</span>         <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">amt</span><span class="o">=</span><span class="n">amt</span><span class="p">,</span> <span class="n">decode_content</span><span class="o">=</span><span class="n">decode_content</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1062</span>         <span class="k">if</span> <span class="n">data</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1063</span>             <span class="k">yield</span> <span class="n">data</span>
+
+<span class="nn">File ~\AppData\Local\miniconda3\Lib\site-packages\urllib3\response.py:949,</span> in <span class="ni">HTTPResponse.read</span><span class="nt">(self, amt, decode_content, cache_content)</span>
+<span class="g g-Whitespace">    </span><span class="mi">946</span>     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_decoded_buffer</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">amt</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">947</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_decoded_buffer</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">amt</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">949</span> <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_raw_read</span><span class="p">(</span><span class="n">amt</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">951</span> <span class="n">flush_decoder</span> <span class="o">=</span> <span class="n">amt</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="p">(</span><span class="n">amt</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">data</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">953</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">data</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_decoded_buffer</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+
+<span class="nn">File ~\AppData\Local\miniconda3\Lib\site-packages\urllib3\response.py:873,</span> in <span class="ni">HTTPResponse._raw_read</span><span class="nt">(self, amt, read1)</span>
+<span class="g g-Whitespace">    </span><span class="mi">870</span> <span class="n">fp_closed</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_fp</span><span class="p">,</span> <span class="s2">&quot;closed&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">872</span> <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_error_catcher</span><span class="p">():</span>
+<span class="ne">--&gt; </span><span class="mi">873</span>     <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fp_read</span><span class="p">(</span><span class="n">amt</span><span class="p">,</span> <span class="n">read1</span><span class="o">=</span><span class="n">read1</span><span class="p">)</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">fp_closed</span> <span class="k">else</span> <span class="sa">b</span><span class="s2">&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">874</span>     <span class="k">if</span> <span class="n">amt</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">amt</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">data</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">875</span>         <span class="c1"># Platform-specific: Buggy versions of Python.</span>
+<span class="g g-Whitespace">    </span><span class="mi">876</span>         <span class="c1"># Close the connection when no data is returned</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">881</span>         <span class="c1"># not properly close the connection in all cases. There is</span>
+<span class="g g-Whitespace">    </span><span class="mi">882</span>         <span class="c1"># no harm in redundantly calling close.</span>
+<span class="g g-Whitespace">    </span><span class="mi">883</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_fp</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="nn">File ~\AppData\Local\miniconda3\Lib\site-packages\urllib3\response.py:856,</span> in <span class="ni">HTTPResponse._fp_read</span><span class="nt">(self, amt, read1)</span>
+<span class="g g-Whitespace">    </span><span class="mi">853</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fp</span><span class="o">.</span><span class="n">read1</span><span class="p">(</span><span class="n">amt</span><span class="p">)</span> <span class="k">if</span> <span class="n">amt</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fp</span><span class="o">.</span><span class="n">read1</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">854</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">855</span>     <span class="c1"># StringIO doesn&#39;t like amt=None</span>
+<span class="ne">--&gt; </span><span class="mi">856</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fp</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">amt</span><span class="p">)</span> <span class="k">if</span> <span class="n">amt</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fp</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="nn">File ~\AppData\Local\miniconda3\Lib\http\client.py:479,</span> in <span class="ni">HTTPResponse.read</span><span class="nt">(self, amt)</span>
+<span class="g g-Whitespace">    </span><span class="mi">476</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">amt</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">477</span>     <span class="c1"># clip the read to the &quot;end of response&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">478</span>     <span class="n">amt</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span>
+<span class="ne">--&gt; </span><span class="mi">479</span> <span class="n">s</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fp</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">amt</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">480</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">s</span> <span class="ow">and</span> <span class="n">amt</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">481</span>     <span class="c1"># Ideally, we would raise IncompleteRead if the content-length</span>
+<span class="g g-Whitespace">    </span><span class="mi">482</span>     <span class="c1"># wasn&#39;t satisfied, but it might break compatibility.</span>
+<span class="g g-Whitespace">    </span><span class="mi">483</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_close_conn</span><span class="p">()</span>
+
+<span class="nn">File ~\AppData\Local\miniconda3\Lib\socket.py:720,</span> in <span class="ni">SocketIO.readinto</span><span class="nt">(self, b)</span>
+<span class="g g-Whitespace">    </span><span class="mi">718</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">719</span>     <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">720</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sock</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">721</span>     <span class="k">except</span> <span class="n">timeout</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">722</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_timeout_occurred</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="nn">File ~\AppData\Local\miniconda3\Lib\ssl.py:1251,</span> in <span class="ni">SSLSocket.recv_into</span><span class="nt">(self, buffer, nbytes, flags)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1247</span>     <span class="k">if</span> <span class="n">flags</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1248</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1249</span>           <span class="s2">&quot;non-zero flags not allowed in calls to recv_into() on </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span>
+<span class="g g-Whitespace">   </span><span class="mi">1250</span>           <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1251</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">nbytes</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1252</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1253</span>     <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">nbytes</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
+
+<span class="nn">File ~\AppData\Local\miniconda3\Lib\ssl.py:1103,</span> in <span class="ni">SSLSocket.read</span><span class="nt">(self, len, buffer)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1101</span> <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1102</span>     <span class="k">if</span> <span class="n">buffer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1103</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1104</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1105</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<section id="precipitation-validation">
+<h3>Precipitation validation<a class="headerlink" href="#precipitation-validation" title="Link to this heading">#</a></h3>
+<p>This Python script performs a statistical comparison between observed and downscaled rainfall data across multiple stations using Q-Q (quantile-quantile) plots. It utilizes Pandas for data handling, NumPy for numerical operations, Matplotlib for visualization, and SciPy &amp; Scikit-Learn for statistical analysis.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">ks_2samp</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span><span class="p">,</span> <span class="n">mean_absolute_error</span><span class="p">,</span> <span class="n">r2_score</span>
+
+<span class="c1"># Define file paths for all stations</span>
+<span class="n">stations</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;MIAMI-FS_R&quot;</span><span class="p">,</span><span class="s2">&quot;NP-201&quot;</span><span class="p">,</span> <span class="s2">&quot;NP-202&quot;</span><span class="p">,</span> <span class="s2">&quot;NP-203&quot;</span><span class="p">,</span> <span class="s2">&quot;NP-205&quot;</span><span class="p">,</span> <span class="s2">&quot;NP-206&quot;</span><span class="p">,</span> <span class="s2">&quot;NP-A13&quot;</span><span class="p">,</span> 
+            <span class="s2">&quot;NP-FMB&quot;</span><span class="p">,</span> <span class="s2">&quot;NP-NESS20&quot;</span><span class="p">,</span> <span class="s2">&quot;NP-OT3&quot;</span><span class="p">,</span> <span class="s2">&quot;NP-P33&quot;</span><span class="p">,</span> <span class="s2">&quot;NP-P34&quot;</span><span class="p">,</span> <span class="s2">&quot;NP-P35&quot;</span><span class="p">,</span> <span class="s2">&quot;NP-P36&quot;</span><span class="p">,</span> <span class="s2">&quot;NP-P38&quot;</span><span class="p">]</span>
+<span class="n">file_paths</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">station</span> <span class="ow">in</span> <span class="n">stations</span><span class="p">:</span>
+    <span class="n">file_paths</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;Livneh (</span><span class="si">{</span><span class="n">station</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;C:/Users/mgebremedhin/Documents/FGCU/BISECT/PostProcessing/RCM_Validation/Livneh/</span><span class="si">{</span><span class="n">station</span><span class="si">}</span><span class="s2">_L_2011_2019.csv&quot;</span>
+    <span class="n">file_paths</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;Daymet (</span><span class="si">{</span><span class="n">station</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;C:/Users/mgebremedhin/Documents/FGCU/BISECT/PostProcessing/RCM_Validation/Daymet/</span><span class="si">{</span><span class="n">station</span><span class="si">}</span><span class="s2">_D_2011_2019.csv&quot;</span>
+
+<span class="c1"># Define columns of interest</span>
+<span class="n">models</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ACCESS-CM2&#39;</span><span class="p">,</span> <span class="s1">&#39;BCC-CSM2-MR&#39;</span><span class="p">,</span> <span class="s1">&#39;CNRM-ESM2-1&#39;</span><span class="p">,</span> <span class="s1">&#39;MPI-ESM1-2-HR&#39;</span><span class="p">,</span> <span class="s1">&#39;MRI-ESM2-0&#39;</span><span class="p">,</span> <span class="s1">&#39;NorESM2-MM&#39;</span><span class="p">]</span>
+<span class="n">observed_col</span> <span class="o">=</span> <span class="s1">&#39;Observed&#39;</span>
+
+<span class="c1"># Function to load data and drop NaNs</span>
+<span class="k">def</span> <span class="nf">load_and_clean_data</span><span class="p">(</span><span class="n">file_path</span><span class="p">):</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="n">observed_col</span><span class="p">]</span> <span class="o">+</span> <span class="n">models</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">df</span>
+
+<span class="c1"># Load all datasets</span>
+<span class="n">dataframes</span> <span class="o">=</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">load_and_clean_data</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">file_paths</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+
+<span class="c1"># Set up a grid for Q-Q plots</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">70</span><span class="p">))</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+
+<span class="c1"># Loop over datasets and axes</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">df</span><span class="p">),</span> <span class="n">ax</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">dataframes</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">axes</span><span class="p">):</span>
+    <span class="n">mean_observed</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">observed_col</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>  <span class="c1"># Compute mean observed rainfall</span>
+
+    <span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">models</span><span class="p">:</span>
+        <span class="n">observed</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">observed_col</span><span class="p">])</span>
+        <span class="n">modeled</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">model</span><span class="p">])</span>
+
+        <span class="c1"># Compute RMSE, MAE, and Mean</span>
+        <span class="n">rmse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">observed</span><span class="p">,</span> <span class="n">modeled</span><span class="p">))</span>
+        <span class="n">mae</span> <span class="o">=</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">observed</span><span class="p">,</span> <span class="n">modeled</span><span class="p">)</span>
+        <span class="n">r2</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">observed</span><span class="p">,</span> <span class="n">modeled</span><span class="p">)</span>
+        <span class="n">mean_model</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">model</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+        <span class="c1"># Compute quantiles</span>
+        <span class="n">quantiles</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">observed</span><span class="p">))</span>
+        <span class="n">obs_quantiles</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">observed</span><span class="p">,</span> <span class="n">quantiles</span><span class="p">)</span>
+        <span class="n">mod_quantiles</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">modeled</span><span class="p">,</span> <span class="n">quantiles</span><span class="p">)</span>
+
+        <span class="c1"># Q-Q plot</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">obs_quantiles</span><span class="p">,</span> <span class="n">mod_quantiles</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> 
+                   <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">model</span><span class="si">}</span><span class="s2"> (MAE:</span><span class="si">{</span><span class="n">mae</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">, µ:</span><span class="si">{</span><span class="n">mean_model</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> mm)&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Plot 1:1 reference line</span>
+    <span class="n">max_val</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">observed_col</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="n">df</span><span class="p">[</span><span class="n">models</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>  
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_val</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_val</span><span class="p">],</span> <span class="s1">&#39;r--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;1:1 Line&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Formatting</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Observed Quantiles&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Modeled Quantiles&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper left&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Obs µ: </span><span class="si">{</span><span class="n">mean_observed</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> mm&quot;</span><span class="p">,</span> 
+            <span class="n">transform</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">transAxes</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;regular&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="c1"># Adjust layout and show the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;C:/Users/mgebremedhin/Documents/FGCU/BISECT/PostProcessing/RCM_Validation/Figures/Q-Q_Plot.png&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/6ae734fd68ee5dd40b9de8fc43e0b0d08f5e4c4a2c9496fe99e46774da0aa825.png" src="_images/6ae734fd68ee5dd40b9de8fc43e0b0d08f5e4c4a2c9496fe99e46774da0aa825.png" />
+</div>
+</div>
+<section id="geotiff-files-into-a-single-dat-file">
+<h4>GeoTIFF files into a single .dat file<a class="headerlink" href="#geotiff-files-into-a-single-dat-file" title="Link to this heading">#</a></h4>
+<p>This Python script processes multiple GeoTIFF files from a specified directory and combines their data into a single <code class="docutils literal notranslate"><span class="pre">.dat</span></code> file. The code is designed to handle thousands of TIFF files efficiently and outputs a formatted text file with rows prefixed by a unique column code for each TIFF file, which is in the format required by BISECT model</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">rasterio</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c1"># Define fixed grid dimensions</span>
+<span class="n">cols</span><span class="p">,</span> <span class="n">rows</span> <span class="o">=</span> <span class="mi">259</span><span class="p">,</span> <span class="mi">186</span>  <span class="c1"># 259 columns × 186 rows</span>
+<span class="n">cell_size</span> <span class="o">=</span> <span class="mi">500</span>  <span class="c1"># Original grid resolution in meters</span>
+
+<span class="c1"># Define new zone resolution</span>
+<span class="n">x_res</span><span class="p">,</span> <span class="n">y_res</span> <span class="o">=</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">500</span>  <span class="c1"># Resolution in meters</span>
+<span class="n">zone_cols</span> <span class="o">=</span> <span class="n">cols</span> <span class="o">//</span> <span class="p">(</span><span class="n">x_res</span> <span class="o">//</span> <span class="n">cell_size</span><span class="p">)</span>
+<span class="n">zone_rows</span> <span class="o">=</span> <span class="n">rows</span> <span class="o">//</span> <span class="p">(</span><span class="n">y_res</span> <span class="o">//</span> <span class="n">cell_size</span><span class="p">)</span>
+<span class="n">num_zones</span> <span class="o">=</span> <span class="n">zone_cols</span> <span class="o">*</span> <span class="n">zone_rows</span>
+
+<span class="c1"># Path to folder containing rainfall raster files</span>
+<span class="n">raster_folder</span> <span class="o">=</span> <span class="s2">&quot;C:/Users/mgebremedhin/OneDrive - Florida Gulf Coast University/FGCU_Mewcha_Data/Livneh/Model_based/SD/baseline/Tiff_MRI-ESM2-0&quot;</span>
+
+<span class="c1"># Get a sorted list of all .tif files</span>
+<span class="n">raster_files</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">([</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">raster_folder</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">raster_folder</span><span class="p">)</span> <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.tif&#39;</span><span class="p">)])</span>
+
+<span class="c1"># Output file path</span>
+<span class="n">output_file</span> <span class="o">=</span> <span class="s2">&quot;C:/Users/mgebremedhin/Documents/FGCU/BISECT/PostProcessing/BISECT_Rainfall_Input/Zones/inputrain_6_hr_SD_baseline500_MRI-ESM2-0_2011_2019.dat&quot;</span>
+
+<span class="c1"># Compute zone indices, ensuring bottom-left origin</span>
+<span class="k">def</span> <span class="nf">get_zone_indices</span><span class="p">():</span>
+    <span class="n">zones</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">zone_rows</span><span class="p">):</span>  <span class="c1"># Start from the bottom row</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">zone_cols</span><span class="p">):</span>
+            <span class="n">col_start</span> <span class="o">=</span> <span class="n">j</span> <span class="o">*</span> <span class="p">(</span><span class="n">x_res</span> <span class="o">//</span> <span class="n">cell_size</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="n">col_end</span> <span class="o">=</span> <span class="nb">min</span><span class="p">((</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">x_res</span> <span class="o">//</span> <span class="n">cell_size</span><span class="p">),</span> <span class="n">cols</span><span class="p">)</span>
+            <span class="n">row_start</span> <span class="o">=</span> <span class="n">rows</span> <span class="o">-</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">y_res</span> <span class="o">//</span> <span class="n">cell_size</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>  <span class="c1"># Reverse row index</span>
+            <span class="n">row_end</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">rows</span> <span class="o">-</span> <span class="n">i</span> <span class="o">*</span> <span class="p">(</span><span class="n">y_res</span> <span class="o">//</span> <span class="n">cell_size</span><span class="p">),</span> <span class="n">rows</span><span class="p">)</span>
+            <span class="n">zones</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">col_start</span><span class="p">,</span> <span class="n">col_end</span><span class="p">,</span> <span class="n">row_start</span><span class="p">,</span> <span class="n">row_end</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">zones</span>
+
+<span class="n">zones</span> <span class="o">=</span> <span class="n">get_zone_indices</span><span class="p">()</span>
+
+<span class="c1"># Compute average rainfall per zone</span>
+<span class="k">def</span> <span class="nf">get_zone_average</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">col_start</span><span class="p">,</span> <span class="n">col_end</span><span class="p">,</span> <span class="n">row_start</span><span class="p">,</span> <span class="n">row_end</span><span class="p">):</span>
+    <span class="n">zone_data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">row_start</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="n">row_end</span><span class="p">,</span> <span class="n">col_start</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="n">col_end</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">nanmean</span><span class="p">(</span><span class="n">zone_data</span><span class="p">)</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">zone_data</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span> <span class="k">else</span> <span class="mi">0</span>
+
+<span class="c1"># Open output file for writing</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_file</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="c1"># Write grid cell information in the required format</span>
+    <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="p">(</span><span class="n">col_start</span><span class="p">,</span> <span class="n">col_end</span><span class="p">,</span> <span class="n">row_start</span><span class="p">,</span> <span class="n">row_end</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">zones</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="se">\n</span><span class="s2">1</span><span class="se">\n</span><span class="si">{</span><span class="n">col_start</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">col_end</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">row_start</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">row_end</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># End of header section</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;0</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;1.00,&quot;</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s2">&quot;0.&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">zones</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Process each raster file</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">raster_file</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">raster_files</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">with</span> <span class="n">rasterio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">raster_file</span><span class="p">)</span> <span class="k">as</span> <span class="n">src</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">src</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># Read the first (only) band</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">data</span> <span class="o">==</span> <span class="n">src</span><span class="o">.</span><span class="n">nodata</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span> <span class="o">/</span> <span class="mi">86400000</span>  <span class="c1"># Convert mm/day to m/second</span>
+        
+        <span class="c1"># Generate time step labels</span>
+        <span class="n">row_codes</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">base</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">base</span> <span class="ow">in</span> <span class="p">[</span><span class="mf">0.21</span><span class="p">,</span> <span class="mf">0.46</span><span class="p">,</span> <span class="mf">0.71</span><span class="p">,</span> <span class="mf">0.96</span><span class="p">]]</span>
+        
+        <span class="c1"># Write rainfall data four times for each time step (without trailing comma)</span>
+        <span class="k">for</span> <span class="n">row_code</span> <span class="ow">in</span> <span class="n">row_codes</span><span class="p">:</span>
+            <span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">get_zone_average</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">col_start</span><span class="p">,</span><span class="w"> </span><span class="n">col_end</span><span class="p">,</span><span class="w"> </span><span class="n">row_start</span><span class="p">,</span><span class="w"> </span><span class="n">row_end</span><span class="p">)</span><span class="si">:</span><span class="s2">.2E</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">col_start</span><span class="p">,</span> <span class="n">col_end</span><span class="p">,</span> <span class="n">row_start</span><span class="p">,</span> <span class="n">row_end</span> <span class="ow">in</span> <span class="n">zones</span><span class="p">]</span>
+            <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">row_code</span><span class="si">}</span><span class="s2">,&quot;</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">values</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Rainfall input file for each zone generated: </span><span class="si">{</span><span class="n">output_file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
 </section>
 </section>
 
@@ -487,20 +949,20 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="team.html"
+       href="StudyArea.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Team Members</p>
+        <p class="prev-next-title">Study area</p>
       </div>
     </a>
     <a class="right-next"
-       href="Presentations.html"
+       href="Modeling.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Events</p>
+        <p class="prev-next-title">Modeling</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -511,8 +973,7 @@
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -521,9 +982,29 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Global climate models</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cmip6-based-multi-model-hydroclimate-projection-over-the-conterminous-us-version-1-1">CMIP6-based Multi-model Hydroclimate Projection over the Conterminous US, Version 1.1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualization-of-baseline-and-near-future-precipitation-tmax-tmin-projections-for-soth-florida">Visualization of Baseline and Near-Future Precipitation, Tmax. Tmin Projections for Soth Florida</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#code-summary-downloading-and-saving-netcdf-files-baseline">Code Summary: Downloading and Saving NetCDF Files (Baseline)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-netcdf-url"><code class="docutils literal notranslate"><span class="pre">download_netcdf(url)</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-and-save-netcdf-models-base-url-variable-name-years-output-path"><code class="docutils literal notranslate"><span class="pre">download_and_save_netcdf(models,</span> <span class="pre">base_url,</span> <span class="pre">variable_name,</span> <span class="pre">years,</span> <span class="pre">output_path)</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-usage">Example Usage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-notes">Key Notes:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#precipitation-validation">Precipitation validation</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#geotiff-files-into-a-single-dat-file">GeoTIFF files into a single .dat file</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>
@@ -571,8 +1052,8 @@ By Mewcha Gebremedhin
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
