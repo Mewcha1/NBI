@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Modeling &#8212; Nature-based project</title>
+    <title>Modeling &#8212; Home</title>
   
   
   
@@ -32,10 +32,10 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=3874eb3a" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=6a7d0a54" />
     <link rel="stylesheet" type="text/css" href="_static/.ipynb_checkpoints/custom-checkpoint.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -151,7 +151,7 @@
   
   
   
-    <p class="title logo__title">Nature-based project</p>
+    <p class="title logo__title">Home</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -177,12 +177,12 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="team.html">Team Members</a></li>
-<li class="toctree-l1"><a class="reference internal" href="StudyArea.html">Study area</a></li>
+<li class="toctree-l1"><a class="reference internal" href="StudyArea.html">Study Area</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMIP6.html">Global climate models</a></li>
 
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Modeling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Presentations.html">Events</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Publication.html">Publication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Publication.html">Report and publications</a></li>
 </ul>
 
     </div>
@@ -751,39 +751,67 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">83</span>
-<span class="g g-Whitespace">     </span><span class="mi">80</span> <span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">top</span><span class="p">,</span> <span class="n">bottom</span> <span class="o">=</span> <span class="mf">461000.0</span><span class="p">,</span> <span class="mf">590500.0</span><span class="p">,</span> <span class="mf">2872000.0</span><span class="p">,</span> <span class="mf">2779000.0</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">84</span>
 <span class="g g-Whitespace">     </span><span class="mi">82</span> <span class="c1"># Extract average salinity over all stress periods</span>
-<span class="ne">---&gt; </span><span class="mi">83</span> <span class="n">salinity_baseline_avg</span> <span class="o">=</span> <span class="n">extract_salinity_avg</span><span class="p">(</span><span class="n">baseline_ucn</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">84</span> <span class="n">salinity_future_avg</span> <span class="o">=</span> <span class="n">extract_salinity_avg</span><span class="p">(</span><span class="n">future_ucn</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">83</span> <span class="n">salinity_baseline_avg</span> <span class="o">=</span> <span class="n">extract_salinity_avg</span><span class="p">(</span><span class="n">baseline_ucn</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">84</span> <span class="n">salinity_future_avg</span> <span class="o">=</span> <span class="n">extract_salinity_avg</span><span class="p">(</span><span class="n">future_ucn</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">86</span> <span class="c1"># Compute difference (Future - Baseline)</span>
+<span class="g g-Whitespace">     </span><span class="mi">87</span> <span class="n">salinity_difference</span> <span class="o">=</span> <span class="n">salinity_future_avg</span> <span class="o">-</span> <span class="n">salinity_baseline_avg</span>
 
-<span class="nn">Cell In[4], line 17,</span> in <span class="ni">extract_salinity_avg</span><span class="nt">(ucn_file)</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="n">times</span> <span class="o">=</span> <span class="n">ucn_obj</span><span class="o">.</span><span class="n">get_times</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="n">salinity_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">ucn_obj</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">totim</span><span class="o">=</span><span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">times</span><span class="p">]</span>
-<span class="ne">---&gt; </span><span class="mi">17</span> <span class="n">salinity_3d_avg</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nanmean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">salinity_list</span><span class="p">,</span> <span class="p">[</span><span class="o">-</span><span class="mi">9999</span><span class="p">,</span> <span class="mi">999</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">salinity_list</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="k">return</span> <span class="n">salinity_3d_avg</span>
+<span class="nn">Cell In[4], line 13,</span> in <span class="ni">extract_salinity_avg</span><span class="nt">(ucn_file)</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="k">def</span> <span class="nf">extract_salinity_avg</span><span class="p">(</span><span class="n">ucn_file</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span><span class="sd">     Extracts and computes the average salinity across all stress periods.</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">---&gt; </span><span class="mi">13</span>     <span class="n">ucn_obj</span> <span class="o">=</span> <span class="n">bf</span><span class="o">.</span><span class="n">UcnFile</span><span class="p">(</span><span class="n">ucn_file</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">times</span> <span class="o">=</span> <span class="n">ucn_obj</span><span class="o">.</span><span class="n">get_times</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span>     <span class="n">salinity_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">ucn_obj</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">totim</span><span class="o">=</span><span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">times</span><span class="p">]</span>
 
-<span class="nn">File ~\AppData\Local\miniconda3\Lib\site-packages\numpy\lib\_nanfunctions_impl.py:1048,</span> in <span class="ni">nanmean</span><span class="nt">(a, axis, dtype, out, keepdims, where)</span>
-<span class="g g-Whitespace">    </span><span class="mi">968</span> <span class="nd">@array_function_dispatch</span><span class="p">(</span><span class="n">_nanmean_dispatcher</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">969</span> <span class="k">def</span> <span class="nf">nanmean</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">_NoValue</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">970</span>             <span class="o">*</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">_NoValue</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">971</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">972</span><span class="sd">     Compute the arithmetic mean along the specified axis, ignoring NaNs.</span>
-<span class="g g-Whitespace">    </span><span class="mi">973</span><span class="sd"> </span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1046</span><span class="sd"> </span>
-<span class="g g-Whitespace">   </span><span class="mi">1047</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1048</span>     <span class="n">arr</span><span class="p">,</span> <span class="n">mask</span> <span class="o">=</span> <span class="n">_replace_nan</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1049</span>     <span class="k">if</span> <span class="n">mask</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1050</span>         <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="n">out</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="n">keepdims</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1051</span>                        <span class="n">where</span><span class="o">=</span><span class="n">where</span><span class="p">)</span>
+<span class="nn">File ~\AppData\Local\miniconda3\Lib\site-packages\flopy\utils\binaryfile.py:834,</span> in <span class="ni">UcnFile.__init__</span><span class="nt">(self, filename, text, precision, verbose, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">830</span>     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">831</span> <span class="bp">self</span><span class="o">.</span><span class="n">header_dtype</span> <span class="o">=</span> <span class="n">BinaryHeader</span><span class="o">.</span><span class="n">set_dtype</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">832</span>     <span class="n">bintype</span><span class="o">=</span><span class="s2">&quot;Ucn&quot;</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="n">precision</span>
+<span class="g g-Whitespace">    </span><span class="mi">833</span> <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">834</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">precision</span><span class="p">,</span> <span class="n">verbose</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">835</span> <span class="k">return</span>
 
-<span class="nn">File ~\AppData\Local\miniconda3\Lib\site-packages\numpy\lib\_nanfunctions_impl.py:110,</span> in <span class="ni">_replace_nan</span><span class="nt">(a, val)</span>
-<span class="g g-Whitespace">    </span><span class="mi">108</span> <span class="k">if</span> <span class="n">mask</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">109</span>     <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">subok</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">110</span>     <span class="n">np</span><span class="o">.</span><span class="n">copyto</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="n">mask</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">112</span> <span class="k">return</span> <span class="n">a</span><span class="p">,</span> <span class="n">mask</span>
+<span class="nn">File ~\AppData\Local\miniconda3\Lib\site-packages\flopy\utils\binaryfile.py:466,</span> in <span class="ni">BinaryLayerFile.__init__</span><span class="nt">(self, filename, precision, verbose, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">463</span> <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">464</span>     <span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">PathLike</span><span class="p">],</span> <span class="n">precision</span><span class="p">,</span> <span class="n">verbose</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+<span class="g g-Whitespace">    </span><span class="mi">465</span> <span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">466</span>     <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">precision</span><span class="p">,</span> <span class="n">verbose</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File ~\AppData\Local\miniconda3\Lib\site-packages\flopy\utils\datafile.py:209,</span> in <span class="ni">LayerFile.__init__</span><span class="nt">(self, filename, precision, verbose, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">206</span>     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;LayerFile error: unrecognized kwargs: </span><span class="si">{</span><span class="n">args</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">208</span> <span class="c1"># read through the file and build the pointer index</span>
+<span class="ne">--&gt; </span><span class="mi">209</span> <span class="bp">self</span><span class="o">.</span><span class="n">_build_index</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">211</span> <span class="c1"># now that we read the data and know nrow and ncol,</span>
+<span class="g g-Whitespace">    </span><span class="mi">212</span> <span class="c1"># we can make a generic mg if needed</span>
+<span class="g g-Whitespace">    </span><span class="mi">213</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">mg</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+
+<span class="nn">File ~\AppData\Local\miniconda3\Lib\site-packages\flopy\utils\binaryfile.py:493,</span> in <span class="ni">BinaryLayerFile._build_index</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">491</span> <span class="n">ipos</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="g g-Whitespace">    </span><span class="mi">492</span> <span class="k">while</span> <span class="n">ipos</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">totalbytes</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">493</span>     <span class="n">header</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_header</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">494</span>     <span class="bp">self</span><span class="o">.</span><span class="n">recordarray</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">header</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">495</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">header</span><span class="p">[</span><span class="s2">&quot;text&quot;</span><span class="p">]:</span>
+
+<span class="nn">File ~\AppData\Local\miniconda3\Lib\site-packages\flopy\utils\binaryfile.py:550,</span> in <span class="ni">BinaryLayerFile._get_header</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">545</span> <span class="k">def</span> <span class="nf">_get_header</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">546</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">547</span><span class="sd">     Read the file header</span>
+<span class="g g-Whitespace">    </span><span class="mi">548</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">549</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">550</span>     <span class="n">header</span> <span class="o">=</span> <span class="n">binaryread</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">header_dtype</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,))</span>
+<span class="g g-Whitespace">    </span><span class="mi">551</span>     <span class="k">return</span> <span class="n">header</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="nn">File ~\AppData\Local\miniconda3\Lib\site-packages\flopy\utils\binaryfile.py:358,</span> in <span class="ni">binaryread</span><span class="nt">(file, vartype, shape, charlen)</span>
+<span class="g g-Whitespace">    </span><span class="mi">355</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">356</span>     <span class="c1"># find the number of values</span>
+<span class="g g-Whitespace">    </span><span class="mi">357</span>     <span class="n">nval</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">shape</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">358</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fromfile</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">vartype</span><span class="p">,</span> <span class="n">nval</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">359</span>     <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">size</span> <span class="o">&lt;</span> <span class="n">nval</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">360</span>         <span class="k">raise</span> <span class="ne">EOFError</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
