@@ -1,4 +1,4 @@
-### Events
+# Events
 
 [ First Group Meeting_1_20241220](NBI.pdf)  
 

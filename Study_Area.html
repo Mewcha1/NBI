@@ -100,8 +100,8 @@
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search this book..."
-         aria-label="Search this book..."
+         placeholder="Search..."
+         aria-label="Search..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -167,18 +167,11 @@
  </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="intro.html">
-                    NBI project overview
-                </a>
-            </li>
-        </ul>
-        <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="team.html">Team Members</a></li>
-<li class="toctree-l1"><a class="reference internal" href="StudyArea.html">Study Area</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CMIP6.html">Global climate models</a></li>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Outlines</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="team.html">Team members</a></li>
+<li class="toctree-l1"><a class="reference internal" href="StudyArea.html">Study area</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CMIP6.html">GCMs data</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="Modeling.html">Modeling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Presentations.html">Events</a></li>
@@ -400,7 +393,7 @@ document.write(`
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_6bfa25f7b4a07d7ca4a7e8f21dbd5522 {
+                #map_8a473c53d5e13801595851dc139c0006 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -414,14 +407,14 @@ document.write(`
 &lt;body&gt;
     
     
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_6bfa25f7b4a07d7ca4a7e8f21dbd5522&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_8a473c53d5e13801595851dc139c0006&quot; &gt;&lt;/div&gt;
         
 &lt;/body&gt;
 &lt;script&gt;
     
     
-            var map_6bfa25f7b4a07d7ca4a7e8f21dbd5522 = L.map(
-                &quot;map_6bfa25f7b4a07d7ca4a7e8f21dbd5522&quot;,
+            var map_8a473c53d5e13801595851dc139c0006 = L.map(
+                &quot;map_8a473c53d5e13801595851dc139c0006&quot;,
                 {
                     center: [25.5, -80.75],
                     crs: L.CRS.EPSG3857,
@@ -435,28 +428,28 @@ document.write(`
 
         
     
-            var tile_layer_8b22d6c71715ffd297563c947f69767b = L.tileLayer(
+            var tile_layer_f44e04613adc8447e7fe24056f5c9fa0 = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
         
     
-            tile_layer_8b22d6c71715ffd297563c947f69767b.addTo(map_6bfa25f7b4a07d7ca4a7e8f21dbd5522);
+            tile_layer_f44e04613adc8447e7fe24056f5c9fa0.addTo(map_8a473c53d5e13801595851dc139c0006);
         
     
-            var polygon_cc4949f4adc62b9d93ff856effe830c7 = L.polygon(
+            var polygon_ae79f321f94b3656eef8930bb3bb045e = L.polygon(
                 [[25.10831, -81.39207], [25.10831, -80.09851], [25.96406, -80.09851], [25.96406, -81.39207], [25.10831, -81.39207]],
                 {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;red&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: false, &quot;fillColor&quot;: &quot;red&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 1.0, &quot;smoothFactor&quot;: 1.0, &quot;stroke&quot;: true, &quot;weight&quot;: 3}
-            ).addTo(map_6bfa25f7b4a07d7ca4a7e8f21dbd5522);
+            ).addTo(map_8a473c53d5e13801595851dc139c0006);
         
     
-            var tile_layer_79d9f0b71a37754e09303c3f6739bdb4 = L.tileLayer(
+            var tile_layer_cacc71f28b821f545de25a8e851bea84 = L.tileLayer(
                 &quot;Stamen Terrain&quot;,
                 {&quot;attribution&quot;: &quot;Map tiles by Stamen Design, under CC BY 3.0. Data by OpenStreetMap, under ODbL.&quot;, &quot;detectRetina&quot;: false, &quot;maxZoom&quot;: 18, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
         
     
-            tile_layer_79d9f0b71a37754e09303c3f6739bdb4.addTo(map_6bfa25f7b4a07d7ca4a7e8f21dbd5522);
+            tile_layer_cacc71f28b821f545de25a8e851bea84.addTo(map_8a473c53d5e13801595851dc139c0006);
         
 &lt;/script&gt;
 &lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div></div>
