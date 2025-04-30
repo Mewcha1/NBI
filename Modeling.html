@@ -28,15 +28,26 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=f0c89327" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=d2032c04" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/custom.css?v=6a7d0a54" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=f0c89327" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/.ipynb_checkpoints/custom-checkpoint.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/bootstrap.css?v=b4a3e8ba" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/theme.css?v=a243ae73" />
+    <link rel="stylesheet" type="text/css" href="_static/vendor/fontawesome/6.5.2/css/all.min.css?v=f4fbef65" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -60,6 +71,21 @@
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Modeling';</script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/copybutton_funcs.js?v=776a791e"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/language_data.js?v=d4673a71"></script>
+    <script src="_static/searchtools.js?v=63a53a7d"></script>
+    <script src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/scripts/bootstrap.js?v=7583a70d"></script>
+    <script src="_static/scripts/pydata-sphinx-theme.js?v=4bc35cb3"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?v=4e4fcec4"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Events" href="Presentations.html" />
@@ -173,7 +199,7 @@
 <li class="toctree-l1"><a class="reference internal" href="StudyArea.html">Study area</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMIP6.html">GCMs data</a></li>
 
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Modeling</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">BISECT modeling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Presentations.html">Events</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Publication.html">Report and publications</a></li>
 </ul>
@@ -407,12 +433,42 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   Time  Surface_Head
-0   1.0      0.035644
-1   2.0      0.214596
-2   3.0      0.253408
-3   4.0      0.288653
-4   5.0      0.314386
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">50</span>
+<span class="g g-Whitespace">     </span><span class="mi">47</span> <span class="n">col</span><span class="p">,</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">204</span><span class="p">,</span><span class="mi">118</span>  <span class="c1"># Example coordinates</span>
+<span class="g g-Whitespace">     </span><span class="mi">49</span> <span class="c1"># Extract surface head data</span>
+<span class="ne">---&gt; </span><span class="mi">50</span> <span class="n">surface_head_df</span> <span class="o">=</span> <span class="n">extract_surface_head_timeseries</span><span class="p">(</span><span class="n">bdh_file</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">row</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">52</span> <span class="c1"># Display the first few rows</span>
+<span class="g g-Whitespace">     </span><span class="mi">53</span> <span class="nb">print</span><span class="p">(</span><span class="n">surface_head_df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+<span class="nn">Cell In[1], line 18,</span> in <span class="ni">extract_surface_head_timeseries</span><span class="nt">(bdh_file, col, row)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span><span class="sd"> Extracts the head values from the first non-dry (saturated) layer for a given column and row.</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span><span class="sd"> </span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span><span class="sd">     pd.DataFrame: DataFrame containing Time and Surface Head values.</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="c1"># Load binary head file</span>
+<span class="ne">---&gt; </span><span class="mi">18</span> <span class="n">head_obj</span> <span class="o">=</span> <span class="n">bf</span><span class="o">.</span><span class="n">HeadFile</span><span class="p">(</span><span class="n">bdh_file</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="c1"># Get simulation times</span>
+<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="n">times</span> <span class="o">=</span> <span class="n">head_obj</span><span class="o">.</span><span class="n">get_times</span><span class="p">()</span>
+
+<span class="nn">File ~\AppData\Local\miniconda3\Lib\site-packages\flopy\utils\binaryfile.py:657,</span> in <span class="ni">HeadFile.__init__</span><span class="nt">(self, filename, text, precision, verbose, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">655</span> <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">656</span> <span class="k">if</span> <span class="n">precision</span> <span class="o">==</span> <span class="s2">&quot;auto&quot;</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">657</span>     <span class="n">precision</span> <span class="o">=</span> <span class="n">get_headfile_precision</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">658</span>     <span class="k">if</span> <span class="n">precision</span> <span class="o">==</span> <span class="s2">&quot;unknown&quot;</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">659</span>         <span class="n">s</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Error. Precision could not be determined for </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2">&quot;</span>
+
+<span class="nn">File ~\AppData\Local\miniconda3\Lib\site-packages\flopy\utils\binaryfile.py:399,</span> in <span class="ni">get_headfile_precision</span><span class="nt">(filename)</span>
+<span class="g g-Whitespace">    </span><span class="mi">396</span> <span class="n">result</span> <span class="o">=</span> <span class="s2">&quot;unknown&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">398</span> <span class="c1"># Open file, and check filesize to ensure this is not an empty file</span>
+<span class="ne">--&gt; </span><span class="mi">399</span> <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">400</span> <span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">401</span> <span class="n">totalbytes</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">tell</span><span class="p">()</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;C:/Users/mgebremedhin/Documents/FGCU/BISECT/Model_new/farfuture/output/Output.future/timeBB.uhd&#39;
 </pre></div>
 </div>
 </div>
@@ -742,38 +798,9 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">84</span>
-<span class="g g-Whitespace">     </span><span class="mi">82</span> <span class="c1"># Extract average salinity over all stress periods</span>
-<span class="g g-Whitespace">     </span><span class="mi">83</span> <span class="n">salinity_baseline_avg</span> <span class="o">=</span> <span class="n">extract_salinity_avg</span><span class="p">(</span><span class="n">baseline_ucn</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">84</span> <span class="n">salinity_future_avg</span> <span class="o">=</span> <span class="n">extract_salinity_avg</span><span class="p">(</span><span class="n">future_ucn</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">86</span> <span class="c1"># Compute difference (Future - Baseline)</span>
-<span class="g g-Whitespace">     </span><span class="mi">87</span> <span class="n">salinity_difference</span> <span class="o">=</span> <span class="n">salinity_future_avg</span> <span class="o">-</span> <span class="n">salinity_baseline_avg</span>
-
-<span class="nn">Cell In[4], line 15,</span> in <span class="ni">extract_salinity_avg</span><span class="nt">(ucn_file)</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="n">ucn_obj</span> <span class="o">=</span> <span class="n">bf</span><span class="o">.</span><span class="n">UcnFile</span><span class="p">(</span><span class="n">ucn_file</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="n">times</span> <span class="o">=</span> <span class="n">ucn_obj</span><span class="o">.</span><span class="n">get_times</span><span class="p">()</span>
-<span class="ne">---&gt; </span><span class="mi">15</span> <span class="n">salinity_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">ucn_obj</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">totim</span><span class="o">=</span><span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">times</span><span class="p">]</span>
-<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="n">salinity_3d_avg</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nanmean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">salinity_list</span><span class="p">,</span> <span class="p">[</span><span class="o">-</span><span class="mi">9999</span><span class="p">,</span> <span class="mi">999</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">salinity_list</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="k">return</span> <span class="n">salinity_3d_avg</span>
-
-<span class="nn">File ~\AppData\Local\miniconda3\Lib\site-packages\flopy\utils\datafile.py:566,</span> in <span class="ni">LayerFile.get_data</span><span class="nt">(self, kstpkper, idx, totim, mflay)</span>
-<span class="g g-Whitespace">    </span><span class="mi">563</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">564</span>     <span class="n">totim1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">times</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-<span class="ne">--&gt; </span><span class="mi">566</span> <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_data_array</span><span class="p">(</span><span class="n">totim1</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">567</span> <span class="k">if</span> <span class="n">mflay</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">568</span>     <span class="k">return</span> <span class="n">data</span>
-
-<span class="nn">File ~\AppData\Local\miniconda3\Lib\site-packages\flopy\utils\datafile.py:491,</span> in <span class="ni">LayerFile._get_data_array</span><span class="nt">(self, totim)</span>
-<span class="g g-Whitespace">    </span><span class="mi">489</span>     <span class="n">ncol</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">recordarray</span><span class="p">[</span><span class="s2">&quot;ncol&quot;</span><span class="p">][</span><span class="n">idx</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">490</span>     <span class="n">shp</span> <span class="o">=</span> <span class="p">(</span><span class="n">nrow</span><span class="p">,</span> <span class="n">ncol</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">491</span>     <span class="n">data</span><span class="p">[</span><span class="n">ilay</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read_data</span><span class="p">(</span><span class="n">shp</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">492</span> <span class="k">return</span> <span class="n">data</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
-</pre></div>
-</div>
+<img alt="_images/b910887b0631eb5ca8ac704ba2a5884077fb7dc48cef2d144455029cb68d1625.png" src="_images/b910887b0631eb5ca8ac704ba2a5884077fb7dc48cef2d144455029cb68d1625.png" />
+<img alt="_images/eed3236314cb2014ff3020181fa1a12d0698f8dc084676f5fabbd9c15789d6fe.png" src="_images/eed3236314cb2014ff3020181fa1a12d0698f8dc084676f5fabbd9c15789d6fe.png" />
+<img alt="_images/323570ccbc9471ac981daac3d5f218f725cb799136c49fc5d913f5e0cb5bbb79.png" src="_images/323570ccbc9471ac981daac3d5f218f725cb799136c49fc5d913f5e0cb5bbb79.png" />
 </div>
 </div>
 </section>

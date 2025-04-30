@@ -28,15 +28,26 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=f0c89327" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=d2032c04" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/custom.css?v=6a7d0a54" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=f0c89327" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/.ipynb_checkpoints/custom-checkpoint.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/bootstrap.css?v=b4a3e8ba" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/theme.css?v=a243ae73" />
+    <link rel="stylesheet" type="text/css" href="_static/vendor/fontawesome/6.5.2/css/all.min.css?v=f4fbef65" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -60,6 +71,21 @@
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Instruction to crteate jupyter book';</script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/copybutton_funcs.js?v=776a791e"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/language_data.js?v=d4673a71"></script>
+    <script src="_static/searchtools.js?v=63a53a7d"></script>
+    <script src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/scripts/bootstrap.js?v=7583a70d"></script>
+    <script src="_static/scripts/pydata-sphinx-theme.js?v=4bc35cb3"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?v=4e4fcec4"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -173,7 +199,7 @@
 <li class="toctree-l1"><a class="reference internal" href="StudyArea.html">Study area</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CMIP6.html">GCMs data</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="Modeling.html">Modeling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Modeling.html">BISECT modeling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Presentations.html">Events</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Publication.html">Report and publications</a></li>
 </ul>
@@ -447,6 +473,11 @@ Requirement already satisfied: pure-eval in c:\users\mgebremedhin\appdata\local\
 Note: you may need to restart the kernel to use updated packages.
 </pre></div>
 </div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: Ignoring invalid distribution ~upyterlab (C:\Users\mgebremedhin\AppData\Local\miniconda3\Lib\site-packages)
+WARNING: Ignoring invalid distribution ~upyterlab (C:\Users\mgebremedhin\AppData\Local\miniconda3\Lib\site-packages)
+WARNING: Ignoring invalid distribution ~upyterlab (C:\Users\mgebremedhin\AppData\Local\miniconda3\Lib\site-packages)
+</pre></div>
+</div>
 </div>
 </div>
 </section>
@@ -528,93 +559,6 @@ use ghp-import tool to publish the html. The ghp-import Python package is a util
 <li><p>Save the settings, and GitHub will generate a public URL for your book.</p></li>
 </ol>
 <p>reference: <a class="reference external" href="https://www.youtube.com/watch?v=lZ2FHTkyaMU">https://www.youtube.com/watch?v=lZ2FHTkyaMU</a></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ee</span>
-<span class="kn">import</span> <span class="nn">geemap</span>
-
-<span class="c1"># Authenticate and initialize Earth Engine</span>
-<span class="n">ee</span><span class="o">.</span><span class="n">Authenticate</span><span class="p">()</span>
-<span class="n">ee</span><span class="o">.</span><span class="n">Initialize</span><span class="p">()</span>
-<span class="c1"># Define Florida&#39;s bounding box</span>
-<span class="n">florida_bounds</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">Rectangle</span><span class="p">([</span>
-    <span class="o">-</span><span class="mf">81.39207</span><span class="p">,</span>  <span class="c1"># lon_min</span>
-    <span class="mf">25.10831</span><span class="p">,</span>   <span class="c1"># lat_min</span>
-    <span class="o">-</span><span class="mf">80.09851</span><span class="p">,</span>  <span class="c1"># lon_max</span>
-    <span class="mf">25.96406</span>    <span class="c1"># lat_max</span>
-<span class="p">])</span>
-
-<span class="c1"># Create a map centered on the Florida bounds</span>
-<span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">[</span><span class="mf">25.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">80.75</span><span class="p">],</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-
-<span class="c1"># Add a basemap (Google Satellite basemap)</span>
-<span class="n">Map</span><span class="o">.</span><span class="n">add_basemap</span><span class="p">(</span><span class="s1">&#39;SATELLITE&#39;</span><span class="p">)</span>  <span class="c1"># Google Satellite basemap</span>
-
-<span class="c1"># Create a border by converting the rectangle into a line geometry</span>
-<span class="n">border</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">LineString</span><span class="p">([</span>
-    <span class="p">[</span><span class="o">-</span><span class="mf">81.39207</span><span class="p">,</span> <span class="mf">25.10831</span><span class="p">],</span>  <span class="c1"># bottom-left corner</span>
-    <span class="p">[</span><span class="o">-</span><span class="mf">80.09851</span><span class="p">,</span> <span class="mf">25.10831</span><span class="p">],</span>  <span class="c1"># bottom-right corner</span>
-    <span class="p">[</span><span class="o">-</span><span class="mf">80.09851</span><span class="p">,</span> <span class="mf">25.96406</span><span class="p">],</span>  <span class="c1"># top-right corner</span>
-    <span class="p">[</span><span class="o">-</span><span class="mf">81.39207</span><span class="p">,</span> <span class="mf">25.96406</span><span class="p">],</span>  <span class="c1"># top-left corner</span>
-    <span class="p">[</span><span class="o">-</span><span class="mf">81.39207</span><span class="p">,</span> <span class="mf">25.10831</span><span class="p">]</span>   <span class="c1"># closing the loop back to bottom-left</span>
-<span class="p">])</span>
-
-<span class="c1"># Add the red border line to the map (this layer is now added last to be in front)</span>
-<span class="n">Map</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">border</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;width&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">},</span> <span class="s1">&#39;Florida Boundary Border&#39;</span><span class="p">)</span>
-
-<span class="c1"># Display the map</span>
-<span class="n">Map</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "d7a7d87fa97e4ce496be310a4a6885e7", "version_major": 2, "version_minor": 0}</script></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">folium</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html">
-            <style>
-                .geemap-dark {
-                    --jp-widgets-color: white;
-                    --jp-widgets-label-color: white;
-                    --jp-ui-font-color1: white;
-                    --jp-layout-color2: #454545;
-                    background-color: #383838;
-                }
-
-                .geemap-dark .jupyter-button {
-                    --jp-layout-color3: #383838;
-                }
-
-                .geemap-colab {
-                    background-color: var(--colab-primary-surface-color, white);
-                }
-
-                .geemap-colab .jupyter-button {
-                    --jp-layout-color3: var(--colab-primary-surface-color, white);
-                }
-            </style>
-            </div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: folium in c:\users\mgebremedhin\appdata\local\miniconda3\lib\site-packages (0.18.0)
-Requirement already satisfied: branca&gt;=0.6.0 in c:\users\mgebremedhin\appdata\local\miniconda3\lib\site-packages (from folium) (0.8.0)
-Requirement already satisfied: jinja2&gt;=2.9 in c:\users\mgebremedhin\appdata\local\miniconda3\lib\site-packages (from folium) (3.1.4)
-Requirement already satisfied: numpy in c:\users\mgebremedhin\appdata\local\miniconda3\lib\site-packages (from folium) (2.1.3)
-Requirement already satisfied: requests in c:\users\mgebremedhin\appdata\local\miniconda3\lib\site-packages (from folium) (2.32.3)
-Requirement already satisfied: xyzservices in c:\users\mgebremedhin\appdata\local\miniconda3\lib\site-packages (from folium) (2024.9.0)
-Requirement already satisfied: MarkupSafe&gt;=2.0 in c:\users\mgebremedhin\appdata\local\miniconda3\lib\site-packages (from jinja2&gt;=2.9-&gt;folium) (3.0.2)
-Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in c:\users\mgebremedhin\appdata\local\miniconda3\lib\site-packages (from requests-&gt;folium) (3.3.2)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in c:\users\mgebremedhin\appdata\local\miniconda3\lib\site-packages (from requests-&gt;folium) (3.7)
-Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in c:\users\mgebremedhin\appdata\local\miniconda3\lib\site-packages (from requests-&gt;folium) (2.2.3)
-Requirement already satisfied: certifi&gt;=2017.4.17 in c:\users\mgebremedhin\appdata\local\miniconda3\lib\site-packages (from requests-&gt;folium) (2024.8.30)
-Note: you may need to restart the kernel to use updated packages.
-</pre></div>
-</div>
-</div>
-</div>
 </section>
 
     <script type="text/x-thebe-config">
