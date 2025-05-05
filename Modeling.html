@@ -352,9 +352,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="modeling">
+  <p>Extract GWL daily timeseries data as csv file from the .uhd binary data</p>
+<section id="modeling">
 <h1>Modeling<a class="headerlink" href="#modeling" title="Link to this heading">#</a></h1>
-<p>Extract GWL daily timeseries data as csv file from the .uhd binary data</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">flopy.utils.binaryfile</span> <span class="k">as</span> <span class="nn">bf</span>
@@ -417,42 +417,12 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">50</span>
-<span class="g g-Whitespace">     </span><span class="mi">47</span> <span class="n">col</span><span class="p">,</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">204</span><span class="p">,</span><span class="mi">118</span>  <span class="c1"># Example coordinates</span>
-<span class="g g-Whitespace">     </span><span class="mi">49</span> <span class="c1"># Extract surface head data</span>
-<span class="ne">---&gt; </span><span class="mi">50</span> <span class="n">surface_head_df</span> <span class="o">=</span> <span class="n">extract_surface_head_timeseries</span><span class="p">(</span><span class="n">bdh_file</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">row</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">52</span> <span class="c1"># Display the first few rows</span>
-<span class="g g-Whitespace">     </span><span class="mi">53</span> <span class="nb">print</span><span class="p">(</span><span class="n">surface_head_df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
-
-<span class="nn">Cell In[1], line 18,</span> in <span class="ni">extract_surface_head_timeseries</span><span class="nt">(bdh_file, col, row)</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span><span class="sd"> Extracts the head values from the first non-dry (saturated) layer for a given column and row.</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span><span class="sd"> </span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span><span class="sd">     pd.DataFrame: DataFrame containing Time and Surface Head values.</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="c1"># Load binary head file</span>
-<span class="ne">---&gt; </span><span class="mi">18</span> <span class="n">head_obj</span> <span class="o">=</span> <span class="n">bf</span><span class="o">.</span><span class="n">HeadFile</span><span class="p">(</span><span class="n">bdh_file</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="c1"># Get simulation times</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="n">times</span> <span class="o">=</span> <span class="n">head_obj</span><span class="o">.</span><span class="n">get_times</span><span class="p">()</span>
-
-<span class="nn">File ~\AppData\Local\miniconda3\Lib\site-packages\flopy\utils\binaryfile.py:657,</span> in <span class="ni">HeadFile.__init__</span><span class="nt">(self, filename, text, precision, verbose, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">655</span> <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">656</span> <span class="k">if</span> <span class="n">precision</span> <span class="o">==</span> <span class="s2">&quot;auto&quot;</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">657</span>     <span class="n">precision</span> <span class="o">=</span> <span class="n">get_headfile_precision</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">658</span>     <span class="k">if</span> <span class="n">precision</span> <span class="o">==</span> <span class="s2">&quot;unknown&quot;</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">659</span>         <span class="n">s</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Error. Precision could not be determined for </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2">&quot;</span>
-
-<span class="nn">File ~\AppData\Local\miniconda3\Lib\site-packages\flopy\utils\binaryfile.py:399,</span> in <span class="ni">get_headfile_precision</span><span class="nt">(filename)</span>
-<span class="g g-Whitespace">    </span><span class="mi">396</span> <span class="n">result</span> <span class="o">=</span> <span class="s2">&quot;unknown&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">398</span> <span class="c1"># Open file, and check filesize to ensure this is not an empty file</span>
-<span class="ne">--&gt; </span><span class="mi">399</span> <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">400</span> <span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">401</span> <span class="n">totalbytes</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">tell</span><span class="p">()</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;C:/Users/mgebremedhin/Documents/FGCU/BISECT/Model_new/farfuture/output/Output.future/timeBB.uhd&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   Time  Surface_Head
+0   1.0      0.035644
+1   2.0      0.214596
+2   3.0      0.253408
+3   4.0      0.288653
+4   5.0      0.314386
 </pre></div>
 </div>
 </div>
