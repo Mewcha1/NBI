@@ -1,6 +1,6 @@
 # Nature-based Infrastructure for Enhancing Climate Resiliency of Groundwater Resources in South Florida: An Integrated Modeling Approach
 
-This project is funded by the [Environmental Protection Agency South Florida Program](https://www.epa.gov/fl) under the call "Addressing Climate Resiliency through Nature Based Infrastructure."  The project aims to evaluate and implement nature-based infrastructure features (NBIFs) that mitigate the effects of climate change on groundwater resources using an integrated modeling approach 
+This project is funded by the [Environmental Protection Agency Region 4](https://www.epa.gov/aboutepa/about-epa-region-4-southeast) under the call "Addressing Climate Resiliency through Nature Based Infrastructure."  The project aims to evaluate and implement nature-based infrastructure features (NBIFs) that mitigate the effects of climate change on groundwater resources using an integrated modeling approach 
 
  ![framework](Framework.png)
 

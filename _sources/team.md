@@ -3,7 +3,8 @@
  ![teammembers](teams.png)
 
 
-#### Roles and Responsibilities of the Research Team  
+##### Roles and Responsibilities of the Research Team  
+<div style="line-height: 2.2;">
   
 - **[Ahmed S. Elshall](https://www.fgcu.edu/directory/aelshall)|FGCU**: Adoption and update of the BISECT model for surface water-groundwater modeling
    
@@ -17,9 +18,10 @@
    
 - **[Shelly Krueger](https://www.flseagrant.org/fsg-directory/shelly-krueger)|UF**: Community engagement and outreach
    
-- **[Mewcha Gebremedhin|FGCU](https://www.linkedin.com/in/mewcha-amha-gebremedhin-96565371/?originalSubdomain=nl)**: Postdoctoral Research Associate, assessing nature-based infrastructure for enhancing climate resiliency of groundwater resources using an integrated modeling approach
+- **[Mewcha Gebremedhin](https://www.linkedin.com/in/mewcha-amha-gebremedhin-96565371/?originalSubdomain=nl)|FGCU**: Postdoctoral Research Associate, assessing nature-based infrastructure for enhancing climate resiliency of groundwater resources using an integrated modeling approach
 
 - **Undergrad Student**: Developing and populating the web-based platform
    
 
  ![collabrators](Collabrators.png)
+ </div>
