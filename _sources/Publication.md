@@ -18,7 +18,7 @@
 - Tsegaye, S., Kebedew, M. G., Albrecht, K. K., Missimer, T. M., Thomas, S., & Elshall, A. S. (2024). Integrated GIS-hydrologic-hydraulic modeling to assess combined flood drivers in coastal regions: a case study of Bonita Bay, Florida. Frontiers in Water, 6. https://doi.org/10.3389/frwa.2024.1468354
   <br><br>
 ###### Task 3: Web-based Platform 
-Waiting........  
+Alvear, M., Cabrera, L., Schwartz, M., Smith, C., Gebremedhin, M. A., & Elshall, A. S. (2026). Large language models for the democratization of groundwater and climate data: An example of groundwater climate resiliency in South Florida. 35th Annual Southwest Florida Water Resources Conference.[PDF](_downloads/Alvear_et_2026.pdf)  
 <br><br>
 
 ###### Task 4: Outreach Campaign and Education 
