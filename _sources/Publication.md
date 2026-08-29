@@ -15,7 +15,7 @@ and manuscripts produced through the project.
 
 <br>
 
-## Peer-Reviewed Publications 
+## Peer-Reviewed Publications and Manuscripts
 <br>
 
 ### Task 1: Impact Assessments  
