@@ -57,5 +57,6 @@ and manuscripts produced through the project.
 - Gebremedhin, M.S, A.S. Elshall, S. Tsegaye (2026).Sea-Level “Bathtub” Inundation Mapping in Naples. City of Naples. [PPT](Presentations/SLR_Flooding_Naples.pptx)
 
 - Gebremedhin, M.A., Elshall, A.S., Ye, M, Tsegaye, S, Rotz, R. (2025). Impact of Future Rainfall and Sea-Level Rise on Groundwater-Surface Water Interaction and Salinity in South Florida. AGU25. [PPT](Presentations/AGU25_MA_Gebremedhin_Final.pptx)
+- Gebremedhin and Elshall (2026).LLM-Powered Dashboard for Groundwater Climate Resiliency in South Florida. Florida Gulf Coast University, project presentation to software engineering students. [PPT](LLM_Dashboard_presentation_2025.pptx) 
 
 - Gebremedhin, M.A., Elshall, A.S., Ye, M, Tsegaye, S, Rotz, R. (2025). Impact of Future Rainfall and Sea-Level Rise on Groundwater-Surface Water Interaction and Salinity in South Florida. Seminole Tribe. [PPT](Presentations/BISECT_Presentation_16_June_2025.pptx)
