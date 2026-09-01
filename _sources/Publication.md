@@ -49,7 +49,7 @@ and manuscripts produced through the project.
 -  Gebremedhin, M.A., Elshall, A.S., Ye, M, Tsegaye, S, Rotz, R. (2025).Impact of Future Rainfall and Sea-Level Rise on Groundwater-Surface Water Interaction and Salinity in South Florida, AGU25 conference, oral presentation, https://agu.confex.com/agu/agu25/meetingapp.cgi/Paper/18540.
 
 ## Presentations 
-- Gebremedhin and Elshall (2026). AI-Powered Dashboard for Green Infrastructure Siting in South Florida. Florida Gulf Coast University, project presentation to software engineering students. [PPT](Presentations/Dashboard_presentation.pptx) 
+- Gebremedhin and Elshall (2026). AI-Powered Dashboard for Green Infrastructure Siting in South Florida. Florida Gulf Coast University, project presentation to software engineering students. [PPT](Presentations/Dashboard_presentation.pptx)
 - Elshall and Alvear (2026). Human-Centered AI for South Florida Waters. The 2026 FGCU AI Summer Academy 2026 [PPT](Presentations/Elshall_Alvear_AI_Summer_1.pptx)
 
 - Alvear and Elshall (2026). Human-Centered AI for South Florida Waters. The 2026 FGCU AI Summer Academy 2026.[PPT](Presentations/Elshall_Alvear_AI_Summer_2.pptx)
@@ -58,4 +58,4 @@ and manuscripts produced through the project.
 
 - Gebremedhin, M.A., Elshall, A.S., Ye, M, Tsegaye, S, Rotz, R. (2025). Impact of Future Rainfall and Sea-Level Rise on Groundwater-Surface Water Interaction and Salinity in South Florida. AGU25. [PPT](Presentations/AGU25_MA_Gebremedhin_Final.pptx)
 
-- Gebremedhin, M.A., Elshall, A.S., Ye, M, Tsegaye, S, Rotz, R. (2025). Impact of Future Rainfall and Sea-Level Rise on Groundwater-Surface Water Interaction and Salinity in South Florida. Seminole Tribe. [PPT](Presentations/BISECT_Presentation_16_June_2025.pptx) 
+- Gebremedhin, M.A., Elshall, A.S., Ye, M, Tsegaye, S, Rotz, R. (2025). Impact of Future Rainfall and Sea-Level Rise on Groundwater-Surface Water Interaction and Salinity in South Florida. Seminole Tribe. [PPT](Presentations/BISECT_Presentation_16_June_2025.pptx)
