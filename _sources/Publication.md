@@ -45,7 +45,7 @@ and manuscripts produced through the project.
 
 - Alvear, M., Cabrera, L., Schwartz, M., Smith, C., Gebremedhin, M. A., & Elshall, A. S. (2026). Large language models for the democratization of groundwater and climate data: An example of groundwater climate resiliency in South Florida. 35th Annual Southwest Florida Water Resources Conference.[PDF](_downloads/Alvear_et_al_2026.pdf)
 
--  Gebremedhin, M.A., Elshall, A.S., Ye, M, Tsegaye, S, Rotz, R. (2025).Impact of Future Rainfall and Sea-Level Rise on Groundwater-Surface Water Interaction and Salinity in South Florida, AGU25 conference, oral presentation, https://agu.confex.com/agu/agu25/meetingapp.cgi/Paper/18540.
+-  Gebremedhin, M.A., Elshall, A.S., Ye, M, Tsegaye, S, Rotz, R. (2025).Impact of Future Rainfall and Sea-Level Rise on Groundwater-Surface Water Interaction and Salinity in South Florida, AGU25 conference, oral presentation, https://agu.confex.com/agu/agu25/meetingapp.cgi/Paper/1854064.
 
 ## Presentations 
 - Elshall, A. S., Gebremedhin, M. A., and Alvear, M. (2026). Groundwater Sustainability in South Florida. Stakeholder presentation and discussion with the Conservancy of Southwest Florida. [pdf](Presentations/20261110GWS_Stakeholder_presentation.pdf) 
