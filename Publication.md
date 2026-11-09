@@ -35,12 +35,11 @@ and manuscripts produced through the project.
 - Elshall, A.S., Gebremedhin, M.A., Leah L. Bremer, L.L., Burnett, K.M., Aly I El-Kad, A.I., Wada, C.A., and Ye, M. (2026). Collaborative modeling for groundwater sustainability evaluation in coastal aquifers using simulation optimization. Environmental Research Communications, 8 . https://doi.org/10.1088/2515-7620/ae6f7c
 
 ## Conferences
+- Alvear, M., A.E. Elshall, M.A. Gebremedhin,  L. Cabrera, M. Schwartz, and C. Smith, LLM-mediated Hydrologic Data Communication for Groundwater Climate Resilience in South Florida, H073: Generative AI in Hydrology and Interdisciplinary Environmental Research: Applications, Opportunities, and Challenges, American Geophysical Union Fall Meeting 2026, 7–11 December 2026, San Francisco, https://studio.m-anage.com/agu/agu26/meetingapp.cgi/Paper/2063334 
 
-- Alvear, M., A.E. Elshall, M.A. Gebremedhin,  L. Cabrera, M. Schwartz, and C. Smith, LLM-mediated Hydrologic Data Communication for Groundwater Climate Resilience in South Florida, H073: Generative AI in Hydrology and Interdisciplinary Environmental Research: Applications, Opportunities, and Challenges, American Geophysical Union Fall Meeting 2026, 7–11 December 2026, San Francisco, 
+- Elshall A.S., M.A. Gebremedhin, and M.  (2026).e, Agentic Multicriteria Adaptive Training of Physics-Informed Surrogates for Coastal Groundwater Management, H073 - Generative AI in Hydrology and Interdisciplinary Environmental Research: Applications, Opportunities, and Challenges, American Geophysical Union Fall Meeting 2026, 7–11 December 2026, San Francisco, https://studio.m-anage.com/agu/agu26/meetingapp.cgi/Paper/2065404 
 
-- Elshall A.S., M.A. Gebremedhin, and M.  (2026).e, Agentic Multicriteria Adaptive Training of Physics-Informed Surrogates for Coastal Groundwater Management, H073 - Generative AI in Hydrology and Interdisciplinary Environmental Research: Applications, Opportunities, and Challenges, American Geophysical Union Fall Meeting 2026, 7–11 December 2026, San Francisco, 
-
-- Gebremedhin, M.S, A.S. Elshall, S. Tsegaye, M. Ye(2026),  Geospatial Prioritization of Nature-Based Solutions for Groundwater Recharge and Stormwater Resilience, H071 - Frontiers in Stormwater and Flood Modeling, Measurements, and Manageme
+- Gebremedhin, M.S, A.S. Elshall, S. Tsegaye, M. Ye(2026),  Geospatial Prioritization of Nature-Based Solutions for Groundwater Recharge and Stormwater Resilience, H071 - Frontiers in Stormwater and Flood Modeling, Measurements, and Management, https://studio.m-anage.com/agu/agu26/meetingapp.cgi/Paper/2064012 
 
 - Blanco, V., A.S. Elshall, M. Ye, M. Persons, D. Krutky, and P. Nguyen (2026). Assessing Standalone LSTM and Ensemble Kalman Filter LSTM in Red Tide Forecasting in Southwest Florida, H073 - Generative AI in Hydrology and Interdisciplinary Environmental Research: Applications, Opportunities, and Challenges, American Geophysical Union Fall Meeting 2026, 7–11 December 2026, San Francisco, 
 
@@ -49,6 +48,7 @@ and manuscripts produced through the project.
 -  Gebremedhin, M.A., Elshall, A.S., Ye, M, Tsegaye, S, Rotz, R. (2025).Impact of Future Rainfall and Sea-Level Rise on Groundwater-Surface Water Interaction and Salinity in South Florida, AGU25 conference, oral presentation, https://agu.confex.com/agu/agu25/meetingapp.cgi/Paper/18540.
 
 ## Presentations 
+- Elshall, A. S., Gebremedhin, M. A., and Alvear, M. (2026). Groundwater Sustainability in South Florida. Stakeholder presentation and discussion with the Conservancy of Southwest Florida. [pdf](Presentations/20261110GWS_Stakeholder_presentation.pdf) 
 - Elshall and Gebremedhin (2026). AI-Powered Dashboard for Green Infrastructure Siting in South Florida. Florida Gulf Coast University, project presentation to software engineering students. [PPT](Presentations/Dashboard_presentation.pptx)
 - Elshall and Alvear (2026). Human-Centered AI for South Florida Waters. The 2026 FGCU AI Summer Academy 2026 [PPT](Presentations/Elshall_Alvear_AI_Summer_1.pptx)
 
