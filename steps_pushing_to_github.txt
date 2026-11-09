@@ -1,0 +1,26 @@
+
+pip install jupyter-book
+
+#from mini conda:
+cd/path_before_folder_of_the_book
+
+#to build the book (apply changes)
+# You can check the html files at ..\_build\html\Chapters
+jupyter-book build name_of_book_folder/
+
+
+#Set your remote repo if you have not set it (ask AI)
+#git add . to add all changes
+cd /book_name
+git status  #Change you made
+git add .
+git commit -m "adding ML"
+git pull 
+git push
+
+# If encountering error during git push is caused by a large upload failing due to a timeout or connection issue.
+# This sets the buffer Git uses when sending data over HTTP to 500 MB, which helps prevent timeout issues during large git push operations.
+git config --global http.postBuffer 524288000
+
+
+

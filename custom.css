@@ -1,0 +1,61 @@
+/* Make the Body a Flex Container */
+.body-container {
+    display: flex;
+    min-height: 100vh; /* Full height */
+}
+
+/* Sidebar Styling */
+.bd-sidebar {
+    width: 200px; /* Fixed sidebar width */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: #e6f7ff;
+    overflow-y: auto;
+    z-index: 1000;
+    padding: 10px;
+}
+.sidebar-heading {
+    font-weight: bold;
+    color: blue;
+}
+
+/* Main Content Styling */
+.bd-main {
+    flex-grow: 1; /* Take the remaining width */
+    padding: 20px;
+    box-sizing: border-box;
+    margin-left: 200px; /* Align with sidebar */
+    max-width: calc(100% - 200px); /* Prevents extra space */
+}
+
+/* Responsive Fix for Medium Screens */
+@media (max-width: 1024px) {
+    .bd-sidebar {
+        width: 220px; /* Reduce sidebar width */
+    }
+    .bd-main {
+        margin-left: 220px;
+        max-width: calc(100% - 220px);
+    }
+}
+
+/* Responsive Fix for Smaller Screens */
+@media (max-width: 1200px) {
+    .body-container {
+        flex-direction: column;
+    }
+    
+    .bd-sidebar {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        z-index: 1000;
+    }
+    
+    .bd-main {
+        margin-left: 0;
+        max-width: 100%;
+    }
+}

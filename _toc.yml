@@ -1,0 +1,18 @@
+format: jb-book
+root: intro
+parts:
+  - caption: "Outlines"
+    chapters:
+      - file: team
+        title: Team members
+      - file: StudyArea
+        title: Study area
+      - file: CMIP6
+        title: GCMs
+      - file: Modeling
+        title: BISECT modeling
+      - file: Events
+        title: Events
+      - file: Publication
+        title: Project Outputs
+

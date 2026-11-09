@@ -1,0 +1,21 @@
+# Configuration for the book
+title: "Home"
+author: "Mewcha Gebremedhin"
+#logo: FGCU.png
+html:
+  extra_css:
+    - _static/custom.css
+    - _static/florida_map.html
+    # Configuration for the book
+  theme:
+    options:
+      navigation_depth: 8  # Ensures H2, H3 headers appear in the left sidebar
+      collapse_navigation: False  # Keeps the sidebar expanded by default
+  extra_navbar: ""
+
+sphinx:
+  config:
+    html_theme_options:
+      show_navbar_depth: 8  # Forces deeper subheadings into the left sidebar
+execute:
+  execute_notebooks: "off"
